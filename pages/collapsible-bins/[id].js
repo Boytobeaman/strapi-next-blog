@@ -1,0 +1,47 @@
+import SingleProduct from '../../components/singleProduct'
+import { getCategory, getCategories, getProduct, getProductsByCondition } from '../../lib/api'
+import Layout from '../../components/layout'
+import {DOMAIN, FOLDING_CRATE } from '../../utils'
+import Link from 'next/link'
+
+const Product = ({ product, categories }) => {
+  return (
+    <Layout categories={categories}>
+      <div className="uk-section">
+        <Link href={`/${product.seo_category_slug}`}>
+          <a>
+            {product.seo_category}
+          </a>
+        </Link>
+        <SingleProduct product={product} />
+      </div>
+    </Layout>
+  )
+}
+
+export async function getStaticPaths() {
+  let condition = {"domain":{"name": DOMAIN}, "product_identify_cat": FOLDING_CRATE}
+  const products = (await getProductsByCondition(condition)) || []
+  // console.log(`JSON.stringify(products) ==== ${JSON.stringify(products)}`)
+  return {
+    paths: products.map(product => ({
+      params: {
+        id: product.id,
+        slug: product.slug
+      },
+    })),
+    fallback: false,
+  }
+}
+
+export async function getStaticProps({ params }) {
+  console.log(`product  ====== ${JSON.stringify(params)}`)
+  const product = (await getProduct(params.id)) || []
+  
+  console.log(`product ====== ${product}`)
+  return {
+    props: { product, categories:[] },
+  }
+}
+
+export default Product
