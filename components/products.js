@@ -12,7 +12,7 @@ const Products = ({ products }) => {
           {products.map(product => {
             return (
               <div key={product.id}>
-                <Link href={`/${product.seo_category_slug}/[id]`} as={`/${product.seo_category_slug}/${product.id}`}>
+                <Link href={`/${product.seo_category_slug}/[slug]`} as={`/${product.seo_category_slug}/${product.slug}`}>
                   <a>{product.title}</a>
                 </Link>
               </div>

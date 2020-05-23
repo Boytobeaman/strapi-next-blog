@@ -26,7 +26,6 @@ export async function getStaticPaths() {
   return {
     paths: products.map(product => ({
       params: {
-        id: product.id,
         slug: product.slug
       },
     })),
@@ -36,7 +35,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   console.log(`product  ====== ${JSON.stringify(params)}`)
-  const product = (await getProduct(params.id)) || []
+  const product = (await getProduct(DOMAIN, params.slug)) || []
   
   console.log(`product ====== ${product}`)
   return {
