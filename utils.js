@@ -7,10 +7,10 @@ export const menu = {
     showInUi: true
   },
   foldingCrate:{
-    url: '/folding-plastic-box/',
-    text: 'Folding Plastic Box',
+    url: '/collapsible-bins/',
+    text: 'Collapsible bins',
     product_identify_cat: 'folding crate',
-    showInUi: false
+    showInUi: true
   },
   nestingBox:{
     url: '/distribution-containers/',
