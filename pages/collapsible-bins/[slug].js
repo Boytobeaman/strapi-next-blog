@@ -35,7 +35,8 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   console.log(`product  ====== ${JSON.stringify(params)}`)
-  const product = (await getProduct(DOMAIN, params.slug)) || []
+  let condition = {"domain":{"name": DOMAIN}, "product_identify_cat": FOLDING_CRATE, "slug": params.slug}
+  const product = (await getProductsByCondition(condition))[0] || {}
   
   console.log(`product ====== ${product}`)
   return {
