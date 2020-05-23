@@ -1,5 +1,8 @@
 export const DOMAIN='storagebinsell.com'
 export const FOLDING_CRATE='folding crate'
+export const contact_email = 'seller007@joinplastic.com';
+export const facebook_url = 'https://www.facebook.com/movingbox.sale.1';
+export const twitter_url = 'https://twitter.com/movingboxsale';
 export const menu = {
   home:{
     url:'/',
