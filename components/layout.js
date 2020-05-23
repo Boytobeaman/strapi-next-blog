@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Nav from './nav'
 import MainNavbar from '../components/MainNavbar'
+import Footer from './Footer'
 
 const Layout = ({ children, categories }) => (
   <>
@@ -13,6 +14,7 @@ const Layout = ({ children, categories }) => (
     </Head>
     <MainNavbar />
     {children}
+    <Footer />
   </>
 )
 
