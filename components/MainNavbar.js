@@ -26,7 +26,7 @@ export default class MainNavbar extends React.Component{
       collapsed: !this.state.collapsed
     });
   }
-  componentWillMount(){
+  componentDidMount(){
     let parentLevelLink = this.props.parentLevelLink;
     let this_parent_url = parentLevelLink
       for (let elem in menu) {
