@@ -83,11 +83,9 @@ class ProductDetailTemplateCat extends React.Component {
           
           {the_image &&(
             <img
-              src={require(`${the_image}`)}
-              // src={require('../public/imgs/products/collapsible-crates/collapsible-storage-bins-plastic/collapsible-storage-bins-plastic-1.jpg')}
-              // src={myImg}
-              // src={require('../public/c.png')}
-              // src={'/b.jpg'}
+              src={require(`../public/${the_image}`)}
+              // bolow doesnot work, we need this way require(`${the_image}`)
+              // src={require(the_image)}
               alt={short_title}
               style={{width: 200}}
             />
