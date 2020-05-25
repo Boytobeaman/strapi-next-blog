@@ -86,7 +86,7 @@ class ProductDetailTemplateCat extends React.Component {
               // src={require(the_image)}
               // src={require('../public/imgs/products/collapsible-crates/collapsible-storage-bins-plastic/collapsible-storage-bins-plastic-2.jpg?url')}
               // src={myImg}
-              src={require('./c.png')}
+              src={require('../public/c.png')}
               // src={'/b.jpg'}
               alt={short_title}
               style={{width: 200}}
