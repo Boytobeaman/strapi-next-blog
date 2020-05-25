@@ -10,6 +10,8 @@ import {
   cdn_img_thumbnail
 } from '../utils';
 
+// import myImg from './a.jpg'
+
 
 class ProductDetailTemplateCat extends React.Component {
   constructor(props){
@@ -60,15 +62,15 @@ class ProductDetailTemplateCat extends React.Component {
     let cat_image_url=''
     let srcSet=''
     let placeholderImg=''
-    let the_image
-
+    let the_image;
     if (images && images.length > 0 ) {
-      the_image = images[0].url
+      the_image = images[0].path
       
     }else{
       cat_image_url = cdn_img_thumbnail
       placeholderImg = cdn_img_thumbnail
     }
+    console.log(`the_image ===${the_image}`)
 
     return (
       <div className="product-wrap">
@@ -81,9 +83,13 @@ class ProductDetailTemplateCat extends React.Component {
           
           {the_image &&(
             <img
-              src={the_image}
+              // src={require(the_image)}
+              // src={require('../public/imgs/products/collapsible-crates/collapsible-storage-bins-plastic/collapsible-storage-bins-plastic-2.jpg?url')}
+              // src={myImg}
+              src={require('./b.jpeg?url')}
+              // src={'/b.jpg'}
               alt={short_title}
-              style={{width:200}}
+              style={{width: 500}}
             />
           )}
           {/* {!the_image && (

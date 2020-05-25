@@ -8,12 +8,11 @@ export const inquiry_handle_app_name = '/DEMO_APP';
 export const inquiry_handle_inquiry_url = '/inquiry';
 export const inquiry_handle_email_url = '/email/templateEmail';
 
-export const DOMAIN='storagebinsell.com'
-export const siteUrl='https://www.palletssupplier.com'
+export const DOMAIN='shop.orcro.com'
+export const siteUrl='https://www.shop.orcro.com'
 export const twitterUsername='@PalletBoxSale'
 export const facebookAppID=''
 export const productBrand='Joinplastic'
-export const FOLDING_CRATE='folding crate'
 export const contact_email = 'seller007@joinplastic.com';
 export const facebook_url = 'https://www.facebook.com/movingbox.sale.1';
 export const twitter_url = 'https://twitter.com/movingboxsale';
@@ -28,8 +27,8 @@ export const menu = {
     showInUi: true
   },
   foldingCrate:{
-    url: '/collapsible-bins/',
-    text: 'Collapsible bins',
+    url: '/collapsible-crates/',
+    text: 'Collapsible Crates',
     product_identify_cat: 'folding crate',
     showInUi: true
   },
@@ -52,8 +51,8 @@ export const menu = {
     showInUi: true
   },
   palletBox:{
-    url: '/plastic-pallet-boxes/',
-    text: 'Plastic Pallet Boxes',
+    url: '/stackable-pallet-boxes/',
+    text: 'Stackable Pallet Boxes',
     product_identify_cat: 'pallet box',
     showInUi: true
   },

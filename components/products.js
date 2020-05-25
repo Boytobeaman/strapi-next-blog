@@ -15,7 +15,7 @@ const Products = ({ products }) => {
 
             let short_title = product.short_title
             product.commonproduct.short_title = short_title
-            // product.commonproduct.images = product.images
+            product.commonproduct.images = product.local_img
 
             return (
               <div
