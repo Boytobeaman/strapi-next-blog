@@ -5573,8 +5573,8 @@ next-images@^1.4.0:
 
 next-optimized-images@^2.6.0:
   version "2.6.0"
-  resolved "https://registry.yarnpkg.com/next-optimized-images/-/next-optimized-images-2.6.0.tgz#10ae5feca4148d3abe4a6781e304bcb1d5c3c557"
-  integrity sha512-z+dASQLXIJPrc1iBt+jm5bravXud3nZ3de3Y3HgUNpJNUdkweym91dvKVgmvpXkEaNzExArybuSVNhOB2vR5qA==
+  resolved "https://registry.npm.taobao.org/next-optimized-images/download/next-optimized-images-2.6.0.tgz#10ae5feca4148d3abe4a6781e304bcb1d5c3c557"
+  integrity sha1-EK5f7KQUjTq+SmeB4wS8sdXDxVc=
   dependencies:
     chalk "^2.4.2"
     figures "^3.0.0"
@@ -8344,7 +8344,7 @@ url-loader@^1.1.2:
     mime "^2.0.3"
     schema-utils "^1.0.0"
 
-url-loader@^4.0.0:
+url-loader@^4.0.0, url-loader@^4.1.0:
   version "4.1.0"
   resolved "https://registry.npm.taobao.org/url-loader/download/url-loader-4.1.0.tgz?cache=0&sync_timestamp=1586361769334&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Furl-loader%2Fdownload%2Furl-loader-4.1.0.tgz#c7d6b0d6b0fccd51ab3ffc58a78d32b8d89a7be2"
   integrity sha1-x9aw1rD8zVGrP/xYp40yuNiae+I=

@@ -24,6 +24,7 @@
     "react-moment": "^0.9.6",
     "reactstrap": "^8.4.1",
     "sass": "^1.26.5",
+    "url-loader": "^4.1.0",
     "webp-loader": "^0.6.0"
   },
   "license": "MIT"
