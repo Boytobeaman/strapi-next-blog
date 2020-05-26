@@ -3,7 +3,6 @@ import Card from './card'
 import Link from 'next/link'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import ImageGallery from 'react-image-gallery';
-import "react-image-gallery/styles/css/image-gallery.css";
 import InquiryForm from '../components/InquiryForm';
 import { 
   menu,
