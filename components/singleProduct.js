@@ -68,6 +68,7 @@ class SingleProduct extends React.Component{
   render(){
     let {
       content,
+      contentComponent,
       description,
       backlinks,
       tags,
