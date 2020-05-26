@@ -75,7 +75,7 @@ class SingleProduct extends React.Component{
       folded_height,
       volumn,
       weight,
-      images,
+      local_img,
       static_load,
       dynamic_load,
       seo_category,
@@ -83,7 +83,12 @@ class SingleProduct extends React.Component{
     } = this.props.product;
     let parentLevelLink = `/${seo_category_slug}/`
     let parentLevelLinkText = seo_category
-
+    let images = local_img.map(item => {
+      return{
+        original: require(`../public/${item.url}`),
+        thumbnail: require(`../public/${item.url}?inline`)
+      }
+    });
     return (
       <section className="section product-detail-single">
         <div className="product-detail-single-layout-wrap">
