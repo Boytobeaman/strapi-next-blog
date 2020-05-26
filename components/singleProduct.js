@@ -75,6 +75,14 @@ class SingleProduct extends React.Component{
       title,
       short_title,
       product_identify_cat,
+      local_img,
+      static_load,
+      dynamic_load,
+      seo_category,
+      seo_category_slug
+    } = this.props.product;
+
+    const {
       model,
       external_long,
       external_width,
@@ -85,12 +93,7 @@ class SingleProduct extends React.Component{
       folded_height,
       volumn,
       weight,
-      local_img,
-      static_load,
-      dynamic_load,
-      seo_category,
-      seo_category_slug
-    } = this.props.product;
+    } = this.props.product.commonproduct;
 
     console.log(`product ====== ${JSON.stringify(this.props.product)}`)
 
