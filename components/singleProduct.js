@@ -73,6 +73,7 @@ class SingleProduct extends React.Component{
       backlinks,
       tags,
       title,
+      short_title,
       product_identify_cat,
       model,
       external_long,
@@ -100,7 +101,8 @@ class SingleProduct extends React.Component{
     let images = local_img.map(item => {
       return {
         original: require(`../public/${item.path}`),
-        thumbnail: require(`../public/${item.path}?inline`).default
+        thumbnail: require(`../public/${item.path}?inline`).default,
+        originalAlt: short_title
       }
     });
     debugger
@@ -161,7 +163,7 @@ class SingleProduct extends React.Component{
                 <div className="col-sm-6">
                   <div className="product-spec-table-wrap bg-white p-3">
                     <h1 className="title text-capitalize single-product-title h4" itemProp="name">
-                        {title}
+                        {short_title}
                     </h1>
                     <table className="table table-hover table-bordered single-product-attr">
                       <caption>
