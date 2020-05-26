@@ -83,7 +83,7 @@ class ProductDetailTemplateCat extends React.Component {
           
           {the_image &&(
             <img
-              src={require(`../public/${the_image}`)}
+              src={require(`../public/${the_image}?inline`).default}
               // bolow doesnot work, we need this way require(`${the_image}`)
               // src={require(the_image)}
               alt={short_title}

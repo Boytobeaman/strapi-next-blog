@@ -91,7 +91,7 @@ class SingleProduct extends React.Component{
       seo_category,
       seo_category_slug
     } = this.props.product;
-    
+
     console.log(`product ====== ${JSON.stringify(this.props.product)}`)
 
     let parentLevelLink = `/${seo_category_slug}/`
@@ -105,7 +105,8 @@ class SingleProduct extends React.Component{
       return {
         original: require(`../public/${item.path}`),
         thumbnail: require(`../public/${item.path}?inline`).default,
-        originalAlt: short_title
+        originalAlt: short_title,
+        thumbnailAlt: seo_category
       }
     });
     debugger
