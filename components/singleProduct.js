@@ -85,8 +85,8 @@ class SingleProduct extends React.Component{
     let parentLevelLinkText = seo_category
     let images = local_img.map(item => {
       return{
-        original: require(`../public/${item.url}`),
-        thumbnail: require(`../public/${item.url}?inline`)
+        original: require(`../public/${item.path}`),
+        thumbnail: require(`../public/${item.path}?inline`)
       }
     });
     return (
