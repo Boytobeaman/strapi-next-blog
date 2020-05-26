@@ -100,9 +100,10 @@ class SingleProduct extends React.Component{
     let images = local_img.map(item => {
       return {
         original: require(`../public/${item.path}`),
-        thumbnail: require(`../public/${item.path}?inline`)
+        thumbnail: require(`../public/${item.path}?inline`).default
       }
     });
+    debugger
     console.log(`JSONimages =========${JSON.stringify(images)}`)
 
     return (
