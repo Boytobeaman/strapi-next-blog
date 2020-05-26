@@ -5,7 +5,13 @@ import { kebabCase } from 'lodash'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import ImageGallery from 'react-image-gallery';
 import InquiryForm from '../components/InquiryForm';
-import { HTMLContent } from '../components/Content'
+import Content, { HTMLContent } from '../components/Content'
+import NestingBox from './productDesc/NestingBox'
+import PalletBox from './productDesc/PalletBox'
+import Pallet from './productDesc/Pallet'
+import StackingCrate from './productDesc/StackingCrate'
+import FoldingCrate from './productDesc/FoldingCrate'
+import AllProductCommonDesc from './productDesc/AllProductCommonDesc'
 import { 
   menu,
   mmtoinch, 
@@ -85,6 +91,8 @@ class SingleProduct extends React.Component{
     } = this.props.product;
     let parentLevelLink = `/${seo_category_slug}/`
     let parentLevelLinkText = seo_category
+    const PostContent = contentComponent || Content
+
     if(tags){
       tags = tags.split(",")
     }
