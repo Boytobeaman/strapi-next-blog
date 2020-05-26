@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import ImageGallery from 'react-image-gallery';
 import InquiryForm from '../components/InquiryForm';
+import { HTMLContent } from '../components/Content'
 import { 
   menu,
   mmtoinch, 
