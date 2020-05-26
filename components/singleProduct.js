@@ -136,7 +136,7 @@ class SingleProduct extends React.Component{
                       </a>
                     </Link>
                   </li>
-                  <li className="breadcrumb-item active" aria-current="page">{title}</li>
+                  <li className="breadcrumb-item active" aria-current="page">{short_title}</li>
                 </ol>
               </nav>
               <div className="row" itemScope itemType="http://schema.org/Product">
