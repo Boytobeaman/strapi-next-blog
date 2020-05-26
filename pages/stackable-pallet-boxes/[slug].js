@@ -7,12 +7,7 @@ import Link from 'next/link'
 const Product = ({ product, categories }) => {
   return (
     <Layout categories={categories}>
-      <div className="uk-section">
-        <Link href={`/${product.seo_category_slug}`}>
-          <a>
-            {product.seo_category}
-          </a>
-        </Link>
+      <div className="">
         <SingleProduct product={product} />
       </div>
     </Layout>

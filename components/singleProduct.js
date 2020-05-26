@@ -98,11 +98,12 @@ class SingleProduct extends React.Component{
       tags = tags.split(",")
     }
     let images = local_img.map(item => {
-      return{
+      return {
         original: require(`../public/${item.path}`),
         thumbnail: require(`../public/${item.path}?inline`)
       }
     });
+    console.log(`JSONimages =========${JSON.stringify(images)}`)
 
     return (
       <section className="section product-detail-single">
