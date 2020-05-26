@@ -272,7 +272,7 @@ class SingleProduct extends React.Component{
                         <ul className="taglist">
                           {tags.map(tag => (
                             <li key={tag + `tag`}>
-                              <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                              <Link href={`/tags/${kebabCase(tag)}/`}><a>{tag}</a></Link>
                             </li>
                           ))}
                         </ul>
