@@ -91,6 +91,9 @@ class SingleProduct extends React.Component{
       seo_category,
       seo_category_slug
     } = this.props.product;
+    
+    console.log(`product ====== ${JSON.stringify(this.props.product)}`)
+
     let parentLevelLink = `/${seo_category_slug}/`
     let parentLevelLinkText = seo_category
     const PostContent = contentComponent || Content
