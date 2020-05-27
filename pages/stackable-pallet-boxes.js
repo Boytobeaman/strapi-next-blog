@@ -31,20 +31,20 @@ const Home = ({ products }) => {
           lowPrice = '80.69'
           highPrice = '121.39'
         />
+        <div className="container-fluid">
+          <nav aria-label="breadcrumb">
+            <ol className="breadcrumb bg-white my-2">
+              <li className="breadcrumb-item">
+                <Link href="/">
+                  <a>Home</a>
+                </Link>
+              </li>
+              <li className="breadcrumb-item active" aria-current="page">{cat_text}</li>
+            </ol>
+          </nav>
+          <Products products={products} />
+        </div>
       </section>
-      <div className="container-fluid">
-        <nav aria-label="breadcrumb">
-          <ol className="breadcrumb bg-white my-2">
-            <li className="breadcrumb-item">
-              <Link href="/">
-                <a>Home</a>
-              </Link>
-            </li>
-            <li className="breadcrumb-item active" aria-current="page">{cat_text}</li>
-          </ol>
-        </nav>
-        <Products products={products} />
-      </div>
     </Layout>
   )
 }

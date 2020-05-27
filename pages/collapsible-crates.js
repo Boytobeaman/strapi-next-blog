@@ -31,8 +31,7 @@ const Home = ({ products }) => {
           lowPrice = '80.69'
           highPrice = '121.39'
         />
-      </section>
-      <div className="container-fluid">
+        <div className="container-fluid">
         <nav aria-label="breadcrumb">
           <ol className="breadcrumb bg-white my-2">
             <li className="breadcrumb-item">
@@ -45,6 +44,7 @@ const Home = ({ products }) => {
         </nav>
         <Products products={products} />
       </div>
+      </section>
     </Layout>
   )
 }

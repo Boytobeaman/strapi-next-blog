@@ -9,7 +9,7 @@ export default class Footer extends React.Component{
 
   render() {
     return (
-      <footer className="footer w-100 bg-secondary py-3" style={{ bottom: '0' }}>
+      <footer className="footer w-100 position-absolute bg-secondary py-3" style={{ bottom: '0' }}>
         <div className="footer-logo text-center my-2">
           <img style={{maxHeight: "80px"}} src={'/imgs/logo-stack.png'} />
         </div>
