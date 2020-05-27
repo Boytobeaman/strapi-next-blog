@@ -9,7 +9,7 @@ export const inquiry_handle_inquiry_url = '/inquiry';
 export const inquiry_handle_email_url = '/email/templateEmail';
 
 export const DOMAIN='shop.orcro.com'
-export const siteUrl='https://www.shop.orcro.com'
+export const siteUrl='https://shop.orcro.com'
 export const twitterUsername='@PalletBoxSale'
 export const facebookAppID=''
 export const productBrand='Joinplastic'
