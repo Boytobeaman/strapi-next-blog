@@ -1,5 +1,4 @@
 import React from 'react';
-import {Helmet} from 'react-helmet';
 import Head from 'next/head'
 import PropTypes from 'prop-types';
 import Twitter from './Twitter';
@@ -98,18 +97,19 @@ const SEO = ({
 
   return (
     <>
-      <Helmet title={seo.title} titleTemplate={seo.titleTemplate}>
-        <meta name="description" content={seo.description} />
-        <meta name="image" content={seo.image ? `${siteUrl}${seo.image}` : ''} />
+      <Head>
+        <title>{seo.title}</title>
+        <meta name="description" content={seo.description} key="description" />
+        <meta name="image" content={seo.image ? `${siteUrl}${seo.image}` : ''} key="image" />
+      </Head>
+      <script type="application/ld+json">
+        {JSON.stringify(breadcrumb).replace(/\//g,'\\/')}
+      </script>
+      {ratingRichData &&(
         <script type="application/ld+json">
-          {JSON.stringify(breadcrumb).replace(/\//g,'\\/')}
+          {JSON.stringify(ratingRichData).replace(/\//g,'\\/')}
         </script>
-        {ratingRichData &&(
-          <script type="application/ld+json">
-            {JSON.stringify(ratingRichData).replace(/\//g,'\\/')}
-          </script>
-        )}
-      </Helmet>
+      )}
       <Facebook
         pageUrl={seo.url}
         type={article ? 'article' : null}
