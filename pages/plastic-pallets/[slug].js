@@ -29,11 +29,11 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  console.log(`product  ====== ${JSON.stringify(params)}`)
+  
   let condition = {"domain":{"name": DOMAIN}, "product_identify_cat": menu.pallet.product_identify_cat, "slug": params.slug}
   const product = (await getProductsByCondition(condition))[0] || {}
   
-  console.log(`product ====== ${JSON.stringify(product)}`)
+  
   return {
     props: { product, categories:[] },
   }
