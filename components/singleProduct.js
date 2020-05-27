@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { kebabCase } from 'lodash'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import ImageGallery from 'react-image-gallery';
+import SEO from '../components/SEO/SEO';
+
 import InquiryForm from '../components/InquiryForm';
 import Content, { HTMLContent } from '../components/Content'
 import NestingBox from './productDesc/NestingBox'
@@ -70,9 +72,13 @@ class SingleProduct extends React.Component{
       content,
       contentComponent,
       description,
+      twitter_description,
+      facebook_description,
       backlinks,
       tags,
       title,
+      facebook_title,
+      twitter_title,
       short_title,
       product_identify_cat,
       local_img,
@@ -115,6 +121,17 @@ class SingleProduct extends React.Component{
 
     return (
       <section className="section product-detail-single">
+        <SEO 
+          title={title}
+          twitter_title = {twitter_title}
+          facebook_title = {facebook_title}
+          description = {description}
+          twitter_description = {twitter_description}
+          facebook_description = {facebook_description}
+          pathname = {parentLevelLink}
+          image = {images ? images[0].original : ''}
+
+        />
         <div className="product-detail-single-layout-wrap">
           <div className="product-detail-single-content-wrap">
           <div className="product-detail-single-content">
