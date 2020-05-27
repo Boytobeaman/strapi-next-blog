@@ -27,7 +27,7 @@ const SEO = ({
 }) => {
   const seo = {
     title: title || defaultTitle,
-    titleTemplate: thisTitleTemplate || defaultTitleTemplate,
+    titleTemplate: thisTitleTemplate,
     description: description || defaultDescription,
     image: image,
     url: `${siteUrl}${pathname || '/'}`,
