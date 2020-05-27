@@ -95,7 +95,6 @@ class SingleProduct extends React.Component{
       weight,
     } = this.props.product.commonproduct;
 
-    console.log(`product ====== ${JSON.stringify(this.props.product)}`)
 
     let parentLevelLink = `/${seo_category_slug}/`
     let parentLevelLinkText = seo_category
@@ -112,8 +111,7 @@ class SingleProduct extends React.Component{
         thumbnailAlt: seo_category
       }
     });
-    debugger
-    console.log(`JSONimages =========${JSON.stringify(images)}`)
+
 
     return (
       <section className="section product-detail-single">

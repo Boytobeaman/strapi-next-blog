@@ -70,7 +70,6 @@ class ProductDetailTemplateCat extends React.Component {
       cat_image_url = cdn_img_thumbnail
       placeholderImg = cdn_img_thumbnail
     }
-    console.log(`the_image ===${the_image}`)
 
     return (
       <div className="product-wrap">
