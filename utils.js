@@ -57,13 +57,13 @@ export const menu = {
     showInUi: true
   },
   contact:{
-    url: '/contact/',
-    text: 'Contact',
+    url: '/contact-us/',
+    text: 'Contact Us',
     showInUi: true
   },
   about:{
-    url: '/about/',
-    text: 'About',
+    url: '/about-us/',
+    text: 'About Us',
     showInUi: true
   }
 }
