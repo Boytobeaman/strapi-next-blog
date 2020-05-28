@@ -86,7 +86,6 @@ class ProductDetailTemplateCat extends React.Component {
               // bolow doesnot work, we need this way require(`${the_image}`)
               // src={require(the_image)}
               alt={short_title}
-              style={{height: 200}}
             />
           )}
           {/* {!the_image && (
