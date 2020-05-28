@@ -6,6 +6,8 @@ import Link from 'next/link'
 import {DOMAIN, menu } from '../utils'
 import { getProducts, getCategories, getProductsByCondition } from '../lib/api'
 
+let product_identify_cat = menu.foldingCrate.product_identify_cat
+
 const Home = ({ products }) => {
 
   // for facebook url
@@ -42,7 +44,10 @@ const Home = ({ products }) => {
             <li className="breadcrumb-item active" aria-current="page">{cat_text}</li>
           </ol>
         </nav>
-        <Products products={products} />
+        <Products 
+          product_identify_cat={product_identify_cat} 
+          products={products} 
+        />
       </div>
       </section>
     </Layout>
@@ -51,7 +56,7 @@ const Home = ({ products }) => {
 
 export async function getStaticProps() {
 
-  let condition = {"domain":{"name": DOMAIN}, "product_identify_cat": menu.foldingCrate.product_identify_cat}
+  let condition = {"domain":{"name": DOMAIN}, "product_identify_cat": product_identify_cat}
   const products = (await getProductsByCondition(condition)) || []
 
   return {

@@ -80,7 +80,7 @@ class ProductDetailTemplateCat extends React.Component {
         </div>
         <div className="product-img-wrap">
           
-          {the_image &&(
+          {the_image && this.props.product_identify_cat != "pallet" &&(
             <img
               src={require(`../public/${the_image}?inline`).default}
               // bolow doesnot work, we need this way require(`${the_image}`)
