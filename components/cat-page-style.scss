@@ -126,12 +126,16 @@
       .product-img-wrap{
           float: left;
           width: 40%;
-          height: inherit;
-          img{
-              width: 100%;
-              max-width: 100%;
-              max-height: initial;
+          height: 100px;
+          >span{
+            img{
+                width: unset;
+                height: 100%;
+                max-width: 100%;
+                max-height: initial;
+            }
           }
+          
           .gatsby-image-wrapper{
             @media only screen and (max-width: 767px) {
                 width: 100%!important;
