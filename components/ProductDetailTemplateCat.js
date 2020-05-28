@@ -82,7 +82,7 @@ class ProductDetailTemplateCat extends React.Component {
           
           {the_image && this.props.product_identify_cat != "pallet" &&(
             <img
-              src={require(`../public/${the_image}?inline`).default}
+              src={require(`../public/${the_image}?resize&size=200`).src}
               // bolow doesnot work, we need this way require(`${the_image}`)
               // src={require(the_image)}
               alt={short_title}

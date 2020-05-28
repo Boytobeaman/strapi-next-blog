@@ -111,8 +111,9 @@ class SingleProduct extends React.Component{
     }
     let images = local_img.map(item => {
       return {
-        original: require(`../public/${item.path}`),
-        thumbnail: require(`../public/${item.path}?inline`).default,
+        original: require(`../public/${item.path}?resize&size=600`).src,
+        thumbnail: require(`../public/${item.path}?resize&size=200`).src,
+        srcSet: require(`../public/${item.path}?resize&sizes[]=300&sizes[]=600&sizes[]=1000`).srcSet,
         originalAlt: short_title,
         thumbnailAlt: seo_category
       }
