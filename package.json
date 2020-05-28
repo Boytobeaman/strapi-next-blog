@@ -25,6 +25,7 @@
     "react-dom": "16.13.1",
     "react-helmet": "^6.0.0",
     "react-image-gallery": "^1.0.7",
+    "react-lazy-load-image-component": "^1.4.3",
     "react-markdown": "^4.2.2",
     "react-moment": "^0.9.6",
     "reactstrap": "^8.4.1",

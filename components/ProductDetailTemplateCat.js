@@ -1,6 +1,7 @@
 
 import React from 'react'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import InquiryForm from '../components/InquiryForm';
 import {
@@ -80,24 +81,12 @@ class ProductDetailTemplateCat extends React.Component {
         </div>
         <div className="product-img-wrap">
           
-          {the_image && this.props.product_identify_cat != "pallet" &&(
-            <img
-              src={require(`../public/${the_image}?resize&size=300`).src}
-              // bolow doesnot work, we need this way require(`${the_image}`)
-              // src={require(the_image)}
-              alt={short_title}
-            />
-          )}
-          {/* {!the_image && (
+          {the_image && (
             <LazyLoadImage 
-              src={cat_image_url} 
-              placeholderSrc={placeholderImg}
-              effect="blur"
-              srcSet={srcSet} 
-              sizes="(max-width: 300px) 100vw, 300px"
-              className="" 
-              alt={title} />
-          )} */}
+              src={require(`../public/${the_image}?resize&size=300`).src}
+              placeholderSrc={require(`../public/${the_image}?lqip`)}
+              alt={short_title} />
+          )}
           
         </div>
         <div className="product-right">
