@@ -121,7 +121,7 @@ class SingleProduct extends React.Component{
 
 
     return (
-      <section className="section product-detail-single">
+      <section className="section container-fluid product-detail-single">
         <SEO 
           title={title}
           twitter_title = {twitter_title}
