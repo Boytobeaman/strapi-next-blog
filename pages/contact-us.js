@@ -15,12 +15,12 @@ const ContactUs = ({ products }) => {
 
   return (
     <Layout>
-      <SEO 
-        title={`About us, plastic products supplier`}
-        description = {`Wholesale description`}
-        pathname = {`${cat_link}`}
-      />
-      <section className="section">
+      <section className="section" parentLevelLink={cat_link}>
+        <SEO 
+          title={`About us, plastic products supplier`}
+          description = {`Wholesale description`}
+          pathname = {`${cat_link}`}
+        />
         <div className="container-fluid">
           <nav aria-label="breadcrumb">
             <ol className="breadcrumb bg-white my-2">
