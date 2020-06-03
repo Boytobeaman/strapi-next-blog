@@ -2,7 +2,6 @@ import SingleProduct from '../../components/singleProduct'
 import { getCategory, getCategories, getProduct, getProductsByCondition } from '../../lib/api'
 import Layout from '../../components/layout'
 import {DOMAIN, menu } from '../../utils'
-import Link from 'next/link'
 
 const Product = ({ product, categories }) => {
   return (

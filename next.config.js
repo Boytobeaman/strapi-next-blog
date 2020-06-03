@@ -9,7 +9,7 @@ module.exports = withPlugins([
   [optimizedImages, {
     /* config for next-optimized-images */
     // imagesFolder:"public"
-    optimizeImagesInDev: true,
+    // optimizeImagesInDev: true,
     inlineImageLimit: -1
   }],
   // your other plugins here

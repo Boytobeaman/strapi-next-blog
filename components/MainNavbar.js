@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
+import Link from './Link'
 
 import { menu } from '../utils'
 import {
@@ -27,6 +27,7 @@ export default class MainNavbar extends React.Component{
     });
   }
   componentDidMount(){
+    console.log(`main navbar componentDidMount`)
     let parentLevelLink = this.props.parentLevelLink;
     let this_parent_url = parentLevelLink
       for (let elem in menu) {
@@ -56,7 +57,7 @@ export default class MainNavbar extends React.Component{
           return (
             <NavItem key={key}>
               <Link  href={this_menu.url}>
-                <a className={`nav-link ${this_menu.activeStatus}`} title={this_menu.text}>
+                <a className={`nav-link`} title={this_menu.text}>
                   {this_menu.text}
                 </a>
               </Link>
