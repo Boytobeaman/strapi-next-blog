@@ -8,7 +8,7 @@ export default ({ href, children }) => {
   let className = children.props.className || ''
   console.log(`router.pathname === ${router.pathname}`)
   console.log(`href === ${href}`)
-  if (router.pathname === href) {
+  if (router.pathname.indexOf(href) > -1 ) {
     className = `${className} active`
   }
 
