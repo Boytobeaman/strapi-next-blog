@@ -15,7 +15,7 @@ const AboutUs = ({ products }) => {
 
   return (
     <Layout>
-      <section className="section" parentLevelLink={cat_link}>
+      <section className="section">
         <SEO 
           title={`About us, plastic products supplier`}
           description = {`Wholesale description`}

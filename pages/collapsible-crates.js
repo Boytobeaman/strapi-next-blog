@@ -19,7 +19,7 @@ const Home = ({ products }) => {
 
   return (
     <Layout>
-      <section className="section product-cate-page" parentLevelLink={cat_link}>
+      <section className="section product-cate-page">
         <SEO 
           thisTitleTemplate={`%s | ${cat_text} for sale`}
           title={`${cat_text}, cheap ${cat_text}, Ideal for transportation`}
