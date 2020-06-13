@@ -17,7 +17,7 @@ export default ({ href, children }) => {
   }
 
   // 设置路由到 某分类下产品时，此分类菜单高亮激活状态
-  if (href != "/" && router.pathname.indexOf(href) > -1 ) {
+  if (href != "/" && (router.pathname.indexOf(href) > -1 || `${router.pathname}/`.indexOf(href) > -1) ) {
     className = `${className} active`
   }
 
