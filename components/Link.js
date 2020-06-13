@@ -6,13 +6,18 @@ export default ({ href, children }) => {
   const router = useRouter()
 
   let className = children.props.className || ''
+  // actural path
   console.log(`router.pathname === ${router.pathname}`)
+
+  // href of a link
   console.log(`href === ${href}`)
   // home page
   if (router.pathname == "/" && href === "/" ) {
     className = `${className} active`
   }
-  if (router.pathname != "/" && router.pathname.indexOf(href) > -1 ) {
+
+  // 设置路由到 某分类下产品时，此分类菜单高亮激活状态
+  if (href != "/" && router.pathname.indexOf(href) > -1 ) {
     className = `${className} active`
   }
 
