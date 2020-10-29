@@ -20,6 +20,9 @@
             text-align: center;
             overflow: hidden;
             position: relative;
+            >div{
+                margin: 0 auto;
+            }
             >span{
                 &.lazy-load-image-background{
                     width: 100%;

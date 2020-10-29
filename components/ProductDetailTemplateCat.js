@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import Image from 'next/image'
 
 import InquiryForm from '../components/InquiryForm';
 import {
@@ -82,10 +82,12 @@ class ProductDetailTemplateCat extends React.Component {
         <div className="product-img-wrap">
           
           {the_image && (
-            <LazyLoadImage 
-              src={require(`../public/${the_image}?resize&size=300`).src}
-              placeholderSrc={require(`../public/${the_image}?lqip`)}
-              alt={short_title} />
+              <Image
+                src={`/${the_image}`}
+                alt={short_title}
+                width={200}
+                height={200}
+              />
           )}
           
         </div>

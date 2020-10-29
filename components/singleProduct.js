@@ -1,12 +1,13 @@
 import React from 'react'
 import Card from './card'
 import Link from 'next/link'
+import Image from 'next/image'
 import { kebabCase } from 'lodash'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import ImageGallery from 'react-image-gallery';
 import SEO from '../components/SEO/SEO';
 
 import InquiryForm from '../components/InquiryForm';
+import KeenSlider from '../components/keenSlider'
 import Content, { HTMLContent } from '../components/Content'
 import NestingBox from './productDesc/NestingBox'
 import PalletBox from './productDesc/PalletBox'
@@ -110,14 +111,25 @@ class SingleProduct extends React.Component{
       tags = tags.split(",")
     }
     let images = local_img.map(item => {
+
       return {
-        original: require(`../public/${item.path}?resize&size=600`).src,
-        thumbnail: require(`../public/${item.path}?resize&size=200`).src,
-        srcSet: require(`../public/${item.path}?resize&sizes[]=300&sizes[]=600&sizes[]=1000`).srcSet,
+        original: `/${item.path}`,
+        // thumbnail: require(`../public/${item.path}?resize&size=200`).src,
+        // srcSet: require(`../public/${item.path}?resize&sizes[]=300&sizes[]=600&sizes[]=1000`).srcSet,
         originalAlt: short_title,
         thumbnailAlt: seo_category
       }
     });
+    let contentArray = local_img.map(item => {
+
+      return <Image src={`/${item.path}`} width="600" height="600"></Image>
+    });
+
+    let thumbnailContentArray = local_img.map(item => {
+
+      return <Image src={`/${item.path}`} width="100" height="100"></Image>
+    });
+
 
 
     return (
@@ -160,11 +172,9 @@ class SingleProduct extends React.Component{
                   <link itemProp="image" key={index} href={item.original} />
                 ))}
                 <div className="col-sm-6">
-                  <ImageGallery 
-                    items={images} 
-                    lazyLoad={true} 
-                    showFullscreenButton={false}
-                    showBullets={true}
+                  <KeenSlider
+                    contentArray={contentArray}
+                    thumbnailContentArray={thumbnailContentArray}
                   />
                   <div className="col-sm-6" itemProp="offers" itemScope itemType="http://schema.org/AggregateOffer">
                     <meta itemProp="availability" itemType="http://schema.org/ItemAvailability" content="http://schema.org/InStock"/>
