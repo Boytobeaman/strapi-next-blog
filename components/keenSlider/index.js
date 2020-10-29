@@ -21,7 +21,7 @@ export default (props) => {
   return (
     <>
       <div className={styles["navigation-wrapper"]}>
-        <div ref={sliderRef} className="keen-slider">
+        <div ref={sliderRef} className={`keen-slider ${styles["keen-slider"]}`}>
           {sliderContentArray}
         </div>
         {slider && (
