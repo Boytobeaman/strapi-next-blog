@@ -23,7 +23,7 @@ const Products = ({ products }) => {
                 key={product.slug}
               >
                 <div className="col-xs-12">
-                  <Link href={`/${product.seo_category_slug}/[slug]`} as={`/${product.seo_category_slug}/${product.slug}`}>
+                  <Link href={`/${product.seo_category_slug}/${encodeURIComponent(product.slug)}`}>
                     <a className="cat-product-link">
                       <ProductDetailTemplateCat 
                         infodata={product.commonproduct}
