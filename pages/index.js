@@ -125,7 +125,7 @@ const Home = ({ articles }) => {
                   <p>
                     OEM service are designed to provide you with customized services by predicting your desires and needs.
                   </p>
-                  <Link href="/contact/">
+                  <Link href={menu.contact.url}>
                     <a className="btn btn-danger btn-lg active" role="button" aria-pressed="true">
                       Contact Us
                     </a>
