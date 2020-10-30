@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import Articles from '../components/articles'
 import Layout from '../components/layout'
 import KeenSlider from '../components/keenSlider'
@@ -40,7 +41,7 @@ const Home = ({ articles }) => {
           <h2 className="text-center p-4 text-white">Products Categories</h2>
           <div className="row mx-0">
             <div className="col-sm-3">
-              <Link className="nav-link text-white font-weight-bold pb-0" to={menu.pallet.url}>
+              <Link className="nav-link text-white font-weight-bold pb-0" href={menu.pallet.url}>
                 <Image 
                   alt={menu.pallet.text} 
                   src={`/imgs/plastic-pallets.jpg`} 
@@ -53,7 +54,7 @@ const Home = ({ articles }) => {
               </Link>
             </div>
             <div className="col-sm-3">
-              <Link className="nav-link text-white font-weight-bold pb-0" to={menu.palletBox.url}>
+              <Link className="nav-link text-white font-weight-bold pb-0" href={menu.palletBox.url}>
                 <Image 
                   alt={menu.palletBox.text} 
                   src={`/imgs/plastic-pallet-boxes-b.jpg`} 
@@ -120,7 +121,7 @@ const Home = ({ articles }) => {
                   <p>
                     OEM service are designed to provide you with customized services by predicting your desires and needs.
                   </p>
-                  <Link className="btn btn-danger btn-lg active" role="button" aria-pressed="true" to="/contact/">
+                  <Link className="btn btn-danger btn-lg active" role="button" aria-pressed="true" href="/contact/">
                       Contact Us
                   </Link>
                 </div>
