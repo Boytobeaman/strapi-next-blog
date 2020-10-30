@@ -41,33 +41,37 @@ const Home = ({ articles }) => {
           <h2 className="text-center p-4 text-white">Products Categories</h2>
           <div className="row mx-0">
             <div className="col-sm-3">
-              <Link className="nav-link text-white font-weight-bold pb-0" href={menu.pallet.url}>
-                <Image 
-                  alt={menu.pallet.text} 
-                  src={`/imgs/plastic-pallets.jpg`} 
-                  width="300" 
-                  height="250" 
-                />
-                <p className="home-page-cat-text text-center">
-                  Plastic Pallets
-                </p>
+              <Link href={menu.pallet.url}>
+                <a className="nav-link text-white font-weight-bold pb-0">
+                  <Image 
+                    alt={menu.pallet.text} 
+                    src={`/imgs/plastic-pallets.jpg`} 
+                    width="300" 
+                    height="250" 
+                  />
+                  <p className="home-page-cat-text text-center">
+                    Plastic Pallets
+                  </p>
+                </a>
               </Link>
             </div>
             <div className="col-sm-3">
-              <Link className="nav-link text-white font-weight-bold pb-0" href={menu.palletBox.url}>
-                <Image 
-                  alt={menu.palletBox.text} 
-                  src={`/imgs/plastic-pallet-boxes-b.jpg`} 
-                  width="300" 
-                  height="250" 
-                />
-                <p className="home-page-cat-text text-center">
-                  Plastic Pallet Boxes
-                </p>
-                <div className="d-none">
-                  each reusable container is designed to protect your product and reduce handling costs.
-                  containers are available in light-duty, medium-duty and heavy-duty designs to meet any requirement.
-                </div>
+              <Link href={menu.palletBox.url}>
+                <a className="nav-link text-white font-weight-bold pb-0">
+                  <Image 
+                    alt={menu.palletBox.text} 
+                    src={`/imgs/plastic-pallet-boxes-b.jpg`} 
+                    width="300" 
+                    height="250" 
+                  />
+                  <p className="home-page-cat-text text-center">
+                    Plastic Pallet Boxes
+                  </p>
+                  <div className="d-none">
+                    each reusable container is designed to protect your product and reduce handling costs.
+                    containers are available in light-duty, medium-duty and heavy-duty designs to meet any requirement.
+                  </div>
+                </a>
               </Link>
             </div>
             <div className="col-sm-3">
@@ -121,8 +125,10 @@ const Home = ({ articles }) => {
                   <p>
                     OEM service are designed to provide you with customized services by predicting your desires and needs.
                   </p>
-                  <Link className="btn btn-danger btn-lg active" role="button" aria-pressed="true" href="/contact/">
+                  <Link href="/contact/">
+                    <a className="btn btn-danger btn-lg active" role="button" aria-pressed="true">
                       Contact Us
+                    </a>
                   </Link>
                 </div>
               </div>
