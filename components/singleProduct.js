@@ -122,12 +122,12 @@ class SingleProduct extends React.Component{
     });
     let contentArray = local_img.map(item => {
 
-      return <Image src={`/${item.path}`} width="600" height="600"></Image>
+      return <Image alt={short_title} src={`/${item.path}`} width="600" height="600"></Image>
     });
 
     let thumbnailContentArray = local_img.map(item => {
 
-      return <Image src={`/${item.path}`} width="100" height="100"></Image>
+      return <Image alt={short_title} src={`/${item.path}`} width="100" height="100"></Image>
     });
 
 
