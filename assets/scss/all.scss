@@ -179,6 +179,16 @@ form.contact-us{
     transform: translate(0, -50%);
   }
 }
+
+.keen-slider{
+  .keen-slider__slide.w-100{
+    >div{
+      width: 100%!important;
+    }
+  }
+}
+
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones and tablets: */
   .image-gallery-slides{

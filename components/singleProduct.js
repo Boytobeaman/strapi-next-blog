@@ -122,7 +122,9 @@ class SingleProduct extends React.Component{
     });
     let contentArray = local_img.map(item => {
 
-      return <Image alt={short_title} src={`/${item.path}`} width="600" height="600"></Image>
+      return {
+        content: <Image alt={short_title} src={`/${item.path}`} width="600" height="600"></Image>
+      } 
     });
 
     let thumbnailContentArray = local_img.map(item => {
@@ -173,6 +175,7 @@ class SingleProduct extends React.Component{
                 ))}
                 <div className="col-sm-6">
                   <KeenSlider
+                    autoplay={true}
                     contentArray={contentArray}
                     thumbnailContentArray={thumbnailContentArray}
                   />

@@ -1,22 +1,69 @@
 import React from "react";
+import Link from 'next/link'
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import styles from "./index.module.scss";
 
 export default (props) => {
   const [currentSlide, setCurrentSlide] = React.useState(0);
-  const [sliderRef, slider] = useKeenSlider({
+  const [pause, setPause] = React.useState(false);
+  const timer = React.useRef();
+  const autoPlayProps ={
+    loop: true,
+    duration: 1000,
+    dragStart: () => {
+      setPause(true);
+    },
+    dragEnd: () => {
+      setPause(false);
+    }
+  }
+
+  const defaultConfig ={
     initial: 0,
     slideChanged(s) {
       setCurrentSlide(s.details().relativeSlide);
     }
-  });
+  }
+
+  let activeConfig = defaultConfig;
+  //判断是否自动播放
+  if(props.autoplay){
+    activeConfig = Object.assign(activeConfig, autoPlayProps)
+    
+  }
+  const [sliderRef, slider] = useKeenSlider(activeConfig);
+  
+  if(props.autoplay){
+    React.useEffect(() => {
+      sliderRef.current.addEventListener("mouseover", () => {
+        setPause(true);
+      });
+      sliderRef.current.addEventListener("mouseout", () => {
+        setPause(false);
+      });
+    }, [sliderRef]);
+  
+    React.useEffect(() => {
+      timer.current = setInterval(() => {
+        if (!pause && slider) {
+          slider.next();
+        }
+      }, 2000);
+      return () => {
+        clearInterval(timer.current);
+      };
+    }, [pause, slider]);
+  }
 
   const contentArray = props.contentArray;
   const thumbnailContentArray = props.thumbnailContentArray;
-  const sliderContentArray = contentArray.map((item) => (
-    <div className="keen-slider__slide">{item}</div>
-  ));
+  const sliderContentArray = contentArray.map((item) => {
+    if(item.link_to){
+      return <Link href={item.link_to}><div className={`keen-slider__slide ${item.className ? item.className : "" } ${styles["cursor-pointer"]}`}>{item.content}</div></Link>
+    }
+    return <div className={`keen-slider__slide ${item.className ? item.className : "" }`}>{item.content}</div>
+  });
 
   return (
     <>
@@ -28,12 +75,12 @@ export default (props) => {
           <>
             <ArrowLeft
               onClick={(e) => e.stopPropagation() || slider.prev()}
-              disabled={currentSlide === 0}
+              // disabled={currentSlide === 0}
             />
 
             <ArrowRight
               onClick={(e) => e.stopPropagation() || slider.next()}
-              disabled={currentSlide === slider.details().size - 1}
+              // disabled={currentSlide === slider.details().size - 1}
             />
           </>
         )}
@@ -54,7 +101,7 @@ export default (props) => {
           })}
         </div>
       )}
-      {slider && (
+      {slider && thumbnailContentArray && thumbnailContentArray.length > 0  && (
         <div className={styles["thumbnail-wrapper"]}>
           {[...Array(slider.details().size).keys()].map((idx) => {
             return (
