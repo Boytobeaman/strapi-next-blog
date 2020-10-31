@@ -188,6 +188,74 @@ form.contact-us{
   }
 }
 
+// about us page begin
+.why-choose-us{
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  .why-header{
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .why-text{
+    font-size: 16px;
+  }
+  &.one{
+    background: linear-gradient(to left bottom, #9ec1e4, rgb(202, 211, 221));
+  }
+  &.two{
+    background: linear-gradient(to left bottom, #3d98c3b5, rgb(236, 230, 230));
+  }
+  &.three{
+    background: linear-gradient(to left bottom, #e3e9ecb5, rgb(189, 223, 227));
+  }
+  &.four{
+    background: linear-gradient(to left bottom,#a8bdd2,#fff);
+  }
+}
+.faq{
+  .question-wrap{
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #e9ecef;
+    .question{
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .answer{
+      font-size: 16px;
+    }
+  }
+}
+.map{
+  span.lazy-load-image-background{
+    min-height: 250px;
+    width: 100%;
+  }
+  .bg-img{
+    background-image: url(#{$cdn-url}/static/joinplastic_map_address.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    @media only screen and (max-width: 767px) {
+      background-image: url(#{$cdn-url}/static/joinplastic_map_address_phone.jpg);
+    }
+  }
+  .map-overlay{
+    background-color: rgba(0,0,0,0.26);
+    color: #dee3e8;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    .content{
+      background-color: rgba(0,0,0,.26);
+    }
+  }
+}
+
+// about us page end
+
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones and tablets: */

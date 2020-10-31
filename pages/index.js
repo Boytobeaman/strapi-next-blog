@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Articles from '../components/articles'
 import Layout from '../components/layout'
+import SEO from '../components/SEO/SEO'
 import KeenSlider from '../components/keenSlider'
 import {DOMAIN, menu} from '../utils'
 import { getArticles, getProductsByCondition } from '../lib/api'
@@ -28,6 +29,10 @@ const Home = ({ articles }) => {
   ]
   return (
     <Layout>
+      <SEO 
+        title={`plastic crates, storage totes, plastic containers for sale`}
+        description = {`Wholesale plastic crates, cheap plastic crates for sale, Heavy Duty Export storage totes Perfect for Rount Trips`}
+      />
       <div className="home-page">
         <section className="section">
           <div className="">
