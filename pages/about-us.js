@@ -1,7 +1,8 @@
 import React from 'react'
-import Products from '../components/products'
+import Image from 'next/image'
 import Layout from '../components/layout'
 import SEO from '../components/SEO/SEO'
+import KeenSlider from '../components/keenSlider'
 import Link from 'next/link'
 import {DOMAIN, menu } from '../utils'
 
@@ -11,6 +12,25 @@ const AboutUs = ({ products }) => {
   // for facebook url
   let cat_link = menu.about.url
   let cat_text = menu.about.text
+
+
+  let contentArray =[
+    {
+      className: "w-100",
+      content: <Image alt={`cooperate brand`} src={`/imgs/about-us-cooperate-brand.jpg`} width="1200" height="500" />,
+      link_to: '',
+    },
+    {
+      className: "w-100",
+      content: <Image alt={`our customers`} src={`/imgs/about-us-with-customers.jpg`} width="1200" height="500" />,
+      link_to: ''
+    },
+    {
+      className: "w-100",
+      content: <Image alt={`plastic products certifications`} src={`/imgs/about-us-certifications.jpg`} width="1200" height="500" />,
+      link_to: ''
+    }
+  ]
   
 
   return (
@@ -33,6 +53,12 @@ const AboutUs = ({ products }) => {
             </ol>
           </nav>
         </div>
+      </section>
+      <section className='mb-3'>
+        <KeenSlider
+          autoplay={true}
+          contentArray={contentArray}
+        />
       </section>
       <div className="container-fluid">
         <section className='my-5 border bg-light'>
