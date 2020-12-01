@@ -58,11 +58,11 @@ export default (props) => {
 
   const contentArray = props.contentArray;
   const thumbnailContentArray = props.thumbnailContentArray;
-  const sliderContentArray = contentArray.map((item) => {
+  const sliderContentArray = contentArray.map((item,index) => {
     if(item.link_to){
-      return <Link href={item.link_to}><div className={`keen-slider__slide ${item.className ? item.className : "" } ${styles["cursor-pointer"]}`}>{item.content}</div></Link>
+      return <Link key={index} href={item.link_to}><div className={`keen-slider__slide ${item.className ? item.className : "" } ${styles["cursor-pointer"]}`}>{item.content}</div></Link>
     }
-    return <div className={`keen-slider__slide ${item.className ? item.className : "" }`}>{item.content}</div>
+    return <div key={index} className={`keen-slider__slide ${item.className ? item.className : "" }`}>{item.content}</div>
   });
 
   return (

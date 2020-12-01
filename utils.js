@@ -8,8 +8,8 @@ export const inquiry_handle_app_name = '/DEMO_APP';
 export const inquiry_handle_inquiry_url = '/inquiry';
 export const inquiry_handle_email_url = '/email/templateEmail';
 
-export const DOMAIN='shop.orcro.com'
-export const siteUrl='https://shop.orcro.com'
+export const DOMAIN='pallet-wholesale.com'
+export const siteUrl='https://www.pallet-wholesale.com'
 export const twitterUsername='@PalletBoxSale'
 export const facebookAppID=''
 export const productBrand='Joinplastic'
@@ -30,7 +30,7 @@ export const menu = {
     url: '/collapsible-crates/',
     text: 'Collapsible Crates',
     product_identify_cat: 'folding crate',
-    showInUi: true
+    showInUi: false
   },
   nestingBox:{
     url: '/distribution-containers/',
@@ -51,8 +51,8 @@ export const menu = {
     showInUi: true
   },
   palletBox:{
-    url: '/stackable-pallet-boxes/',
-    text: 'Stackable Pallet Boxes',
+    url: '/bulk-storage-containers/',
+    text: 'Bulk Storage Containers',
     product_identify_cat: 'pallet box',
     showInUi: true
   },
@@ -66,4 +66,41 @@ export const menu = {
     text: 'About Us',
     showInUi: true
   }
+}
+
+
+
+export const footerConfig={
+  friendlyLink:[
+    {
+      href: "https://www.best-boxes.com/product-category/attached-lid-container/",
+      className: "footer-friendly-link",
+      target:"_blank",
+      rel: "noopener",
+      text: "attached lid distribution containers",
+    },
+    {
+      href: "https://www.bulk-containers.com/",
+      className: "footer-friendly-link",
+      target:"_blank",
+      rel: "noopener",
+      text: "bulk plastic containers",
+    },
+    {
+      href: "https://www.vegcrates.com/product-category/vegetable-harvest-crates/",
+      className: "footer-friendly-link",
+      target:"_blank",
+      rel: "noopener",
+      text: "harvest crates",
+    },
+    {
+      href: "https://www.joinplastic.com/product-category/bottle-crate/",
+      className: "footer-friendly-link",
+      target:"_blank",
+      rel: "noopener",
+      text: "plastic beer crates",
+    },
+
+  ],
+  footerCopyright: "© 2020 Shanghai Join Plastic, Inc. All Rights Reserved."
 }
