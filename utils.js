@@ -73,32 +73,32 @@ export const menu = {
 export const footerConfig={
   friendlyLink:[
     {
-      href: "https://www.best-boxes.com/product-category/attached-lid-container/",
+      href: "https://www.plastic-tote.com/",
       className: "footer-friendly-link",
       target:"_blank",
       rel: "noopener",
-      text: "attached lid distribution containers",
+      text: "plastic totes on sale",
     },
     {
       href: "https://www.bulk-containers.com/",
       className: "footer-friendly-link",
       target:"_blank",
       rel: "noopener",
-      text: "bulk plastic containers",
+      text: "bulk plastic containers wholesale",
     },
     {
-      href: "https://www.vegcrates.com/product-category/vegetable-harvest-crates/",
+      href: "https://www.vegcrates.com/",
       className: "footer-friendly-link",
       target:"_blank",
       rel: "noopener",
-      text: "harvest crates",
+      text: "plastic fruit crates wholesale",
     },
     {
       href: "https://www.joinplastic.com/product-category/bottle-crate/",
       className: "footer-friendly-link",
       target:"_blank",
       rel: "noopener",
-      text: "plastic beer crates",
+      text: "plastic beer bottle crates",
     },
 
   ],
