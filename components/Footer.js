@@ -29,9 +29,9 @@ export default class Footer extends React.Component{
         <div className="friendly-link">
           {footerConfig.friendlyLink && (
             <>
-              {footerConfig.friendlyLink.map( item => {
+              {footerConfig.friendlyLink.map( (item, index) => {
                 let {text, ...attr} = item;
-                return <a {...attr}>{ text }</a>
+                return <a key={index} {...attr}>{ text }</a>
               })}
             </>
           )}

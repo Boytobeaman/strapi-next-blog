@@ -104,3 +104,6 @@ export const footerConfig={
   ],
   footerCopyright: "© 2020 Shanghai Join Plastic, Inc. All Rights Reserved."
 }
+
+
+export const productTagRoute = "product-tag"

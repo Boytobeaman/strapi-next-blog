@@ -19,7 +19,8 @@ import {
   menu,
   mmtoinch, 
   kgtolbs, 
-  ltogal
+  ltogal,
+  productTagRoute
 } from '../utils'
 
 class SingleProduct extends React.Component{
@@ -312,7 +313,7 @@ class SingleProduct extends React.Component{
                         <ul className="taglist">
                           {tags.map(tag => (
                             <li key={tag + `tag`}>
-                              <Link href={`/tags/${kebabCase(tag)}/`}><a>{tag}</a></Link>
+                              <Link href={`/${productTagRoute}/${kebabCase(tag)}/`}><a>{tag}</a></Link>
                             </li>
                           ))}
                         </ul>
