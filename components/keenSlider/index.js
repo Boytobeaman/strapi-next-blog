@@ -24,6 +24,10 @@ export default (props) => {
     mode: "free-snap",
     slideChanged(s) {
       setCurrentSlide(s.details().relativeSlide);
+      let activeThumbnail = document.querySelector(".thumbnail-wrapper .thumbnail-active")
+      if(activeThumbnail){
+        activeThumbnail.scrollIntoViewIfNeeded()
+      }
     }
   }
 
@@ -109,7 +113,7 @@ export default (props) => {
               <div
                 key={idx}
                 className={
-                  styles["thumbnail"] + (currentSlide === idx ? ` ${styles["thumbnail-active"]}` : "")
+                  styles["thumbnail"] + (currentSlide === idx ? ` ${styles["thumbnail-active"]} thumbnail-active` : "")
                 }
                 onClick={() => {
                   console.log(idx);
