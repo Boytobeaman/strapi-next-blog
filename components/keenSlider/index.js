@@ -26,7 +26,16 @@ export default (props) => {
       setCurrentSlide(s.details().relativeSlide);
       let activeThumbnail = document.querySelector(".thumbnail-wrapper .thumbnail-active")
       if(activeThumbnail){
-        activeThumbnail.scrollIntoViewIfNeeded()
+        // activeThumbnail.scrollIntoViewIfNeeded()
+        let element = document.querySelector('.thumbnail-wrapper');
+        let position = element.getBoundingClientRect();
+
+        // checking whether fully visible
+        if(position.top >= 0 && position.bottom <= window.innerHeight) {
+          // console.log('Element is fully visible in screen');
+          activeThumbnail.scrollIntoView({behavior: "smooth", block: "nearest", inline: "nearest"});
+        }
+
       }
     }
   }
