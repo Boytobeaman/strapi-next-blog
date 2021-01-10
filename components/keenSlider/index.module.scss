@@ -30,6 +30,8 @@
 .thumbnail-wrapper{
   display: flex;
   transform: translateY(-10px);
+  overflow: scroll;
+  background: #fff;
 }
 .thumbnail{
   margin-right: 5px;

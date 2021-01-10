@@ -10,7 +10,7 @@ export default (props) => {
   const timer = React.useRef();
   const autoPlayProps ={
     loop: true,
-    duration: 1000,
+    duration: 2000,
     dragStart: () => {
       setPause(true);
     },
@@ -21,6 +21,7 @@ export default (props) => {
 
   const defaultConfig ={
     initial: 0,
+    mode: "free-snap",
     slideChanged(s) {
       setCurrentSlide(s.details().relativeSlide);
     }
@@ -102,7 +103,7 @@ export default (props) => {
         </div>
       )}
       {slider && thumbnailContentArray && thumbnailContentArray.length > 0  && (
-        <div className={styles["thumbnail-wrapper"]}>
+        <div className={`${styles["thumbnail-wrapper"]} thumbnail-wrapper`}>
           {[...Array(slider.details().size).keys()].map((idx) => {
             return (
               <div
