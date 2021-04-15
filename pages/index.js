@@ -15,16 +15,16 @@ const Home = ({ articles }) => {
     {
       link_to: menu.pallet.url,
       className: 'w-100',
-      content: <Image alt={menu.pallet.text} src={`/imgs/home/main-slider-plastic-pallets.png`} width="1200" height="500"></Image>
+      content: <Image alt={menu.pallet.text} src={`/imgs/home/main-slider-plastic-pallets.png`} width="1200" height="500" layout="responsive"></Image>
     },
     {
       link_to: menu.pallet.url,
       className: 'w-100',
-      content: <Image alt={menu.palletBox.text} src={`/imgs/home/main-slider-pallet-box.jpg`} width="1200" height="500"></Image>
+      content: <Image alt={menu.palletBox.text} src={`/imgs/home/main-slider-pallet-box.jpg`} width="1200" height="500" layout="responsive"></Image>
     },
     {
       className: 'w-100',
-      content: <Image alt={`moving totes`} src={`/imgs/home/main-slider-nesting-crates.jpg`} width="1200" height="500"></Image>,
+      content: <Image alt={`moving totes`} src={`/imgs/home/main-slider-nesting-crates.jpg`} width="1200" height="500" layout="responsive"></Image>,
     }
   ]
   return (
@@ -52,7 +52,8 @@ const Home = ({ articles }) => {
                     alt={menu.pallet.text} 
                     src={`/imgs/plastic-pallets.jpg`} 
                     width="300" 
-                    height="250" 
+                    height="250"
+                    layout="responsive"
                   />
                   <p className="home-page-cat-text text-center">
                     Plastic Pallets
@@ -67,7 +68,8 @@ const Home = ({ articles }) => {
                     alt={menu.palletBox.text} 
                     src={`/imgs/plastic-pallet-boxes-b.jpg`} 
                     width="300" 
-                    height="250" 
+                    height="250"
+                    layout="responsive"
                   />
                   <p className="home-page-cat-text text-center">
                     Plastic Pallet Boxes
@@ -85,7 +87,8 @@ const Home = ({ articles }) => {
                   alt={`Plastic Folding Crates`} 
                   src={`/imgs/folding-crates.jpg`} 
                   width="300" 
-                  height="250" 
+                  height="250"
+                  layout="responsive"
                 />
                 <p className="home-page-cat-text text-center">
                   Folding Crates
@@ -98,7 +101,8 @@ const Home = ({ articles }) => {
                 alt={`Plastic Moving Bins`} 
                 src={`/imgs/plastic-moving-crates.jpg`} 
                 width="300" 
-                height="250" 
+                height="250"
+                layout="responsive"
               />
               <p className="home-page-cat-text text-center">
                 Plastic Moving Bins
@@ -115,7 +119,8 @@ const Home = ({ articles }) => {
                 alt={`Plastic moving boxes customization`} 
                 src={`/imgs/plastic-moving-boxes-customization-grey.png`} 
                 width="500" 
-                height="500" 
+                height="500"
+                layout="responsive"
               />
             </div>
             <div className="col-sm-7">
@@ -154,7 +159,8 @@ const Home = ({ articles }) => {
                     alt={`Plastic crates manufacturer equipment`} 
                     src={`/imgs/crates-manufacturer-equipment-b.png`} 
                     width="600" 
-                    height="200" 
+                    height="200"
+                    layout="responsive"
                   />
                 </div>
               </div>
@@ -164,7 +170,8 @@ const Home = ({ articles }) => {
                 alt={`Plastic crates manufacturer equipment`} 
                 src={`/imgs/crates-manufacturer-equipment-a.jpg`} 
                 width="600" 
-                height="470" 
+                height="470"
+                layout="responsive"
               />
             </div>
           </div>
@@ -194,7 +201,8 @@ const Home = ({ articles }) => {
                 alt={`Plastic crates manufacturer`} 
                 src={`/imgs/plastic-crate-manufacture-factory.jpg`} 
                 width="520" 
-                height="330" 
+                height="330"
+                layout="responsive"
               />
             </div>
           </div>
