@@ -26,10 +26,10 @@ const Products = ({ products, ...otherProps }) => {
 
             return (
               <div
-                className={`cat-desc-element-wrap single-product-wrap ${sigleProductColumnClass}`}
+                className={`${sigleProductColumnClass}`}
                 key={product.slug}
               >
-                <div className="col-xs-12">
+                <div className="cat-desc-element-wrap single-product-wrap">
                   <Link href={`/${product.seo_category_slug}/${encodeURIComponent(product.slug)}`}>
                     <a className="cat-product-link">
                       <ProductDetailTemplateCat 
