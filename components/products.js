@@ -11,7 +11,7 @@ const Products = ({ products, ...otherProps }) => {
   let sigleProductColumnClass=''
   if(type === "vertical"){
     allProductWrapClass=`row`
-    sigleProductColumnClass = `col-sm-6 col-md-4 col-lg-3`
+    sigleProductColumnClass = `col-xs-6 col-sm-6 col-md-4 col-lg-3`
   }
   return (
     <div>
