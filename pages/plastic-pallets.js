@@ -23,7 +23,7 @@ const Home = ({ products }) => {
       <section className="section product-cate-page">
         <SEO 
           thisTitleTemplate={`%s | ${cat_text} for sale`}
-          title={`${cat_text}, cheap ${cat_text}, Ideal for transportation`}
+          title={`${cat_text}, cheap ${cat_text} supplier, Ideal for transportation`}
           description = {`Wholesale ${cat_text}, cheap ${cat_text} for sale, Heavy Duty Export Plastic Pallets Perfect for One-Way Trips`}
           pathname = {`${cat_link}`}
           image = {the_image ? the_image : ''}
@@ -45,9 +45,21 @@ const Home = ({ products }) => {
               <li className="breadcrumb-item active" aria-current="page">{cat_text}</li>
             </ol>
           </nav>
+          <div className="bg-white p-3">
+            <h2 className="h5">Heavy Duty Plastic Pallet Features & Benefits</h2>
+            <ul>
+              <li>Easy cleaning and visual inspection</li>
+              <li>Hygiene</li>
+              <li>Convenience of 4-way entry</li>
+              <li>Hot-stamp or molded-in logo</li>
+              <li>Suitability for bar code and RFID tracking</li>
+              <li>Interrupted perimeter lip option</li>
+            </ul>
+          </div>
           <Products 
             product_identify_cat={product_identify_cat} 
-            products={products} 
+            products={products}
+            type="vertical"
           />
         </div>
       </section>

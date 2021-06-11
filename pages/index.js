@@ -30,8 +30,8 @@ const Home = ({ articles }) => {
   return (
     <Layout>
       <SEO 
-        title={`plastic crates, storage totes, plastic containers for sale`}
-        description = {`Wholesale plastic crates, cheap plastic crates for sale, Heavy Duty Export storage totes Perfect for Rount Trips`}
+        title={`plastic pallets, heavy-duty industrial plastic pallet for sale`}
+        description = {`Wholesale plastic pallets, Our solutions cover all standard pallet dimensions.We offer all types of high quality plastic pallets for sale.`}
       />
       <div className="home-page">
         <section className="section">
@@ -75,7 +75,7 @@ const Home = ({ articles }) => {
                     Plastic Pallet Boxes
                   </p>
                   <div className="d-none">
-                    each reusable container is designed to protect your product and reduce handling costs.
+                    each reusable Plastic Pallet Boxes is designed to protect your product and reduce handling costs.
                     containers are available in light-duty, medium-duty and heavy-duty designs to meet any requirement.
                   </div>
                 </a>
@@ -129,11 +129,14 @@ const Home = ({ articles }) => {
                   <h2 className="mb-4 font-weight-bold">Products Customization Service</h2>
                   <h5>Custom service according to your specific demand</h5>
                   <p>
-                  Browsed our selection and still can’t find the right crates? 
-                  No problem. Check out our specialty items, or contact us about creating a custom mold to your exact specifications
+                    We also offer shipping plastic pallets in all standard pallet sizes, designed for every product or service imaginable. 
+                    offering custom pallet solutions for moving, storing or displaying products at every point along your supply chain! 
                   </p>
                   <p>
                     OEM service are designed to provide you with customized services by predicting your desires and needs.
+                  </p>
+                  <p>
+                   Plastic pallets protect your product during picking, assembly, processing, storage and distribution in a wide variety of industries including food and beverage, primary packaging, retail distribution, automotive, pharmaceutical, and many others. 
                   </p>
                   <Link href={menu.contact.url}>
                     <a className="btn btn-danger btn-lg active" role="button" aria-pressed="true">
@@ -189,7 +192,7 @@ const Home = ({ articles }) => {
                   </ul>
                   <div className="text-left">
                     <h6>Pallets intended for moderate reuse applications. Depending on the style of plastic pallet, some models are much lighter weight, and thus are easier to handle than wood pallets, plastic pallets that can be used for various industries and applications. </h6>
-                    <p>These plastic pallets can be used again and again, making them an economical solution for your business.</p>
+                    <p>Plastic pallets are an economic, environmental and efficient alternative to wood pallets or skids.</p>
                     <p>Consider stackable plastic pallets when your typical product loads are very heavy, and you need to stack-load products in your warehouse operations.</p>
                     <p>These plastic pallets reduce storage and transportation costs. The consistent lightweight design facilitates handling and makes these plastic pallets optimal carriers for export.</p>
                   </div>
