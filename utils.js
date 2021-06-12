@@ -104,7 +104,7 @@ export const footerConfig={
     },
 
   ],
-  footerCopyright: "© 2020 Shanghai Join Plastic, Inc. All Rights Reserved."
+  footerCopyright: `${(new Date()).getFullYear()} © pallet-wholesale.com ©  All Rights Reserved.`
 }
 
 
