@@ -80,12 +80,14 @@ class ProductDetailTemplateCat extends React.Component {
               <div className="product-wrap">
                 <div className="product-img-wrap-vertical">
                   {the_image && (
+
                         <Image
                           src={`/${the_image}`}
                           alt={short_title}
                           height='200'
                           width='300'
                           layout='responsive'
+                          sizes="260px"
                         />
                     )}
                 </div>
@@ -114,6 +116,8 @@ class ProductDetailTemplateCat extends React.Component {
                       alt={short_title}
                       width={200}
                       height={200}
+                      layout='responsive'
+                      sizes="260px"
                     />
                 )}
                 
