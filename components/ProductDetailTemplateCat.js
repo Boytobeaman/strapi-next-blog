@@ -83,6 +83,7 @@ class ProductDetailTemplateCat extends React.Component {
 
                         <Image
                           src={`/${the_image}`}
+                          className="vertical-img"
                           alt={short_title}
                           height={200}
                           width={200}
