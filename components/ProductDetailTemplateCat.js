@@ -85,7 +85,7 @@ class ProductDetailTemplateCat extends React.Component {
                           src={`/${the_image}`}
                           alt={short_title}
                           height={200}
-                          width={300}
+                          width={200}
                           layout='responsive'
                           sizes="(max-width: 575.98px) 150px,300px"
                         />
