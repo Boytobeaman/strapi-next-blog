@@ -84,10 +84,10 @@ class ProductDetailTemplateCat extends React.Component {
                         <Image
                           src={`/${the_image}`}
                           alt={short_title}
-                          height='200'
-                          width='300'
+                          height={200}
+                          width={300}
                           layout='responsive'
-                          sizes="260px"
+                          sizes="300px"
                         />
                     )}
                 </div>
@@ -117,7 +117,7 @@ class ProductDetailTemplateCat extends React.Component {
                       width={200}
                       height={200}
                       layout='responsive'
-                      sizes="260px"
+                      sizes="300px"
                     />
                 )}
                 
