@@ -87,8 +87,6 @@ class ProductDetailTemplateCat extends React.Component {
                           alt={short_title}
                           height={200}
                           width={200}
-                          layout='responsive'
-                          sizes="(max-width: 575.98px) 150px,300px"
                         />
                     )}
                 </div>
@@ -117,8 +115,6 @@ class ProductDetailTemplateCat extends React.Component {
                       alt={short_title}
                       width={200}
                       height={200}
-                      layout='responsive'
-                      sizes="(max-width: 575.98px) 150px,300px"
                     />
                 )}
                 
