@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 import SEO from '../components/SEO/SEO'
 import KeenSlider from '../components/keenSlider'
 import Link from 'next/link'
-import {DOMAIN, menu } from '../utils'
+import {DOMAIN, menu } from '~/utils/common'
 
 
 const AboutUs = ({ products }) => {
