@@ -23,13 +23,13 @@ const SectionWrapper = styled.div`
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      padding-left: 20px;
+      padding: 20px;
+      background-color: rgba(0,0,0,0.6);
     }
     @media (max-width: 575.98px) {
       .text-wrapper{
         color: #fff;
-        padding-left: 20px;
-        padding-bottom: 20px;
+        padding: 20px;
         background-color: rgba(0,0,0,0.5);
         position: unset;
         top: unset;
