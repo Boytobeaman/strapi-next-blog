@@ -2,7 +2,7 @@ import React from 'react'
 import Link from './Link'
 import Image from 'next/image'
 
-import { menu } from '../utils'
+import { menu } from '~/utils/common'
 import {
   Collapse,
   Navbar,

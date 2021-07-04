@@ -21,6 +21,10 @@ export const twitter_url = 'https://twitter.com/movingboxsale';
 export const cdn_url = 'https://cdn.movingboxsale.com';
 export const cdn_loading_img = `${cdn_url}/static/loading.gif`;
 export const cdn_img_thumbnail = `${cdn_url}/static/noimage_thumbnail.png`;
+export const defaultTitle = `pallet wholesale`;
+export const defaultDescription = `pallet wholesale description`;
+
+
 
 export const menu = {
   home:{
@@ -29,10 +33,11 @@ export const menu = {
     showInUi: true
   },
   foldingCrate:{
-    url: '/collapsible-crates/',
-    text: 'Collapsible Crates',
+    url: '/collapsible-crate/',
+    text: 'Collapsible Crate',
     product_identify_cat: 'folding crate',
-    showInUi: false
+    web_pro_cat_id: "60dfbe4b2aa35750e66f8ebf",
+    showInUi: true
   },
   nestingBox:{
     url: '/distribution-containers/',

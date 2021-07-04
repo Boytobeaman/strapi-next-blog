@@ -3,7 +3,7 @@ import Card from './card'
 import Link from 'next/link'
 import ProductDetailTemplateCat from '../components/ProductDetailTemplateCat';
 
-const Products = ({ products, ...otherProps }) => {
+const Products = ({ products, catConfig={}, ...otherProps }) => {
 
   const { type } = otherProps
 
@@ -21,8 +21,11 @@ const Products = ({ products, ...otherProps }) => {
           {products.map(product => {
 
             let short_title = product.short_title
+            if(!product.commonproduct){
+              product.commonproduct = product.product.all_attributes
+            }
             product.commonproduct.short_title = short_title
-            product.commonproduct.images = product.local_img
+            product.commonproduct.images = product.local_img ? product.local_img : product.product.images
 
             return (
               <div
@@ -34,6 +37,7 @@ const Products = ({ products, ...otherProps }) => {
                     <a className="cat-product-link">
                       <ProductDetailTemplateCat 
                         infodata={product.commonproduct}
+                        catConfig={catConfig}
                         {...otherProps}
                       />
                     </a>

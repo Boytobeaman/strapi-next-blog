@@ -5,7 +5,7 @@ import {
   facebook_url,
   twitter_url,
   footerConfig
-} from '../utils'
+} from '~/utils/common'
 
 export default class Footer extends React.Component{
 

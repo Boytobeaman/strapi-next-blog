@@ -1,5 +1,5 @@
 import React from 'react'
-import { cdn_url } from '../../utils';
+import { cdn_url } from '~/utils/common';
 // import { useStaticQuery, graphql } from 'gatsby';
 // import Img from 'gatsby-image';
 

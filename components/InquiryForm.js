@@ -9,7 +9,7 @@ import {
   inquiry_api_success_code,
   company_name,
   remote_ip_url
-} from '../utils'
+} from '~/utils/common'
 import axios from 'axios';
 import { func } from "prop-types";
 
@@ -140,7 +140,7 @@ export default class InquiryForm extends React.Component {
     return (
       <div className="">
         <div className="content bg-white">
-          <div className="d-none d-sm-block inquiry-pic-wrap">
+          <div className="d-none inquiry-pic-wrap">
             <div className="row border mx-0 my-2">
               <div className="col-4 px-0 text-center">
                 <img className="img-fluid" src={this.state.p_img} alt="choosen product"/>

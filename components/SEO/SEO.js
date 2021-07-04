@@ -3,7 +3,7 @@ import Head from 'next/head'
 import PropTypes from 'prop-types';
 import Twitter from './Twitter';
 import Facebook from './Facebook';
-import { menu, siteUrl, facebookAppID, twitterUsername, productBrand } from '../../utils'
+import { menu, siteUrl, facebookAppID, twitterUsername, productBrand, defaultTitle, defaultDescription } from '~/utils/common'
 
 const SEO = ({
   title = null,

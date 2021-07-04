@@ -3,13 +3,13 @@ import React from 'react'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import Image from 'next/image'
 
-import InquiryForm from '../components/InquiryForm';
+import InquiryForm from '~/components/InquiryForm';
 import {
   mmtoinch,
   kgtolbs,
   ltogal,
   cdn_img_thumbnail
-} from '../utils';
+} from '~/utils/common';
 
 // import myImg from './a.jpg'
 
@@ -43,10 +43,13 @@ class ProductDetailTemplateCat extends React.Component {
   }
 
   render() {
-    const {
+
+    const { infodata } = this.props;
+    let {
       title,
       short_title,
       model,
+      product_model,
       external_long,
       external_width,
       external_height,
@@ -58,18 +61,45 @@ class ProductDetailTemplateCat extends React.Component {
       images,
       category,
       post_title_slug
-    } = this.props.infodata;
+    } = infodata;
 
     let cat_image_url=''
     let srcSet=''
     let placeholderImg=''
     let the_image;
     if (images && images.length > 0 ) {
-      the_image = images[0].path
+      the_image = images[0].path ? images[0].path : images[0].url
+      if(the_image.indexOf("http") !== 0){
+        the_image=`/${the_image}`
+      }
       
     }else{
       cat_image_url = cdn_img_thumbnail
       placeholderImg = cdn_img_thumbnail
+    }
+
+    if(!model){
+      model = product_model
+    }
+    let { show_attributes_config } = this.props.catConfig
+    console.log(show_attributes_config)
+
+
+    if(show_attributes_config){
+      show_attributes_config = JSON.parse(show_attributes_config)
+      //取每个value的值
+      show_attributes_config.forEach(element => {
+        let value = element.value_content;
+        let all_variable = value.match(/\${(.+?)}/ig);
+        if(all_variable && all_variable.length){
+          all_variable.forEach(v_item => {
+            let this_variable = /\${(.+?)}/ig.exec(v_item)[1]
+            let parsed_value = infodata[this_variable]
+            element.value_content = element.value_content.replace(v_item, parsed_value)
+          })
+        }
+        
+      });
     }
 
     return (
@@ -82,21 +112,33 @@ class ProductDetailTemplateCat extends React.Component {
                   {the_image && (
 
                         <Image
-                          src={`/${the_image}`}
+                          src={`${the_image}`}
                           className="vertical-img"
                           alt={short_title}
-                          height={200}
-                          width={200}
+                          height={260}
+                          width={260}
                         />
                     )}
                 </div>
-                <div className="p-2">
-                  <h2 title={short_title} className="product-title h6 text-capitalize text-truncate">{short_title}</h2>
+                <div className="px-2 pt-2 pb-0">
+                  <h2 title={short_title} className="product-title h6 text-capitalize text-truncate mb-0">{short_title}</h2>
                 </div>
-                <div className="contact-model p-2">
-                  <span className="badge badge-info product-model mr-3">Model: {model}</span>
+                <div className="contact-model px-2">
+                  <span className="badge badge-info product-model mr-3" title={model}><span className="d-none d-sm-block">Model: </span>{model}</span>
                   <span className="btn btn-danger float-right product-cat-inquiry btn-sm" onClick={(e)=>this.toContactUs(e,model,cat_image_url)}>Inquiry</span>
                 </div>
+                {show_attributes_config && (
+                  <div className="woo-acf-metas p-2">
+                    {show_attributes_config.map(item => (
+                      <div className={`acf-item ${item.class ? item.class : ""}`}>
+                        <div className="item-key">{item.key_content}</div>
+                        <div className="item-value">{item.value_content}</div>
+                      </div>
+                    ))}
+                    
+                  </div>
+                )}
+                
               </div>
             )
           :
