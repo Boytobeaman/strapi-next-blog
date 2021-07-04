@@ -3,7 +3,7 @@ import Products from '../components/products'
 import Layout from '../components/layout'
 import SEO from '../components/SEO/SEO';
 import Link from 'next/link'
-import {DOMAIN, menu } from '../utils'
+import {DOMAIN, menu } from '~/utils/common'
 import { getProducts, getCategories, getProductsByCondition } from '../lib/api'
 
 let product_identify_cat = menu.palletBox.product_identify_cat
