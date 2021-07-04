@@ -25,7 +25,7 @@ const SectionWrapper = styled.div`
       transform: translateY(-50%);
       padding-left: 20px;
     }
-    @media (max-width: 575px) {
+    @media (max-width: 575.98px) {
       .text-wrapper{
         color: #fff;
         padding-left: 20px;
@@ -87,6 +87,7 @@ const Home = ({ products, catConfig }) => {
                   alt={`folding crates`}
                   width={1100}
                   height={430}
+                  sizes={`(max-width: 575.98px) 480px,(max-width: 767.98px) 800px,1100px`}
                 />
               </div>
               <div className="text-wrapper">
