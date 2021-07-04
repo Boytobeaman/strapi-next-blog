@@ -12,7 +12,7 @@ import {
   inquiry_handle_app_name,
   inquiry_handle_inquiry_url,
   inquiry_handle_email_url
-} from '../utils';
+} from '~/utils/common';
 
 
 const ContactUs = ({ products }) => {
