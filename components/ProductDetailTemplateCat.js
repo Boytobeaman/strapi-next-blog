@@ -82,7 +82,7 @@ class ProductDetailTemplateCat extends React.Component {
       model = product_model
     }
     let { show_attributes_config } = this.props.catConfig
-    console.log(show_attributes_config)
+
 
 
     if(show_attributes_config){
@@ -124,13 +124,16 @@ class ProductDetailTemplateCat extends React.Component {
                   <h2 title={short_title} className="product-title h6 text-capitalize text-truncate mb-0">{short_title}</h2>
                 </div>
                 <div className="contact-model px-2">
-                  <span className="badge badge-info product-model mr-3" title={model}><span className="d-none d-sm-block">Model: </span>{model}</span>
+                  <span className="badge badge-info product-model mr-3" title={model}>
+                    <span className="d-none d-sm-block">Model: {model}</span>
+                    <span className="d-block d-sm-none">{model}</span>
+                  </span>
                   <span className="btn btn-danger float-right product-cat-inquiry btn-sm" onClick={(e)=>this.toContactUs(e,model,cat_image_url)}>Inquiry</span>
                 </div>
                 {show_attributes_config && (
                   <div className="woo-acf-metas p-2">
                     {show_attributes_config.map(item => (
-                      <div className={`acf-item ${item.class ? item.class : ""}`}>
+                      <div key={item.key_content} className={`acf-item ${item.class ? item.class : ""}`}>
                         <div className="item-key">{item.key_content}</div>
                         <div className="item-value">{item.value_content}</div>
                       </div>

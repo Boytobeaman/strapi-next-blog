@@ -24,6 +24,9 @@ const Products = ({ products, catConfig={}, ...otherProps }) => {
             if(!product.commonproduct){
               product.commonproduct = product.product.all_attributes
             }
+            if(!product.commonproduct.product_model && !product.commonproduct.model){
+              product.commonproduct.product_model = product.product.product_model
+            }
             product.commonproduct.short_title = short_title
             product.commonproduct.images = product.local_img ? product.local_img : product.product.images
 
