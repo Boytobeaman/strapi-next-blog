@@ -5,7 +5,7 @@ import Articles from '../components/articles'
 import Layout from '../components/layout'
 import SEO from '../components/SEO/SEO'
 import KeenSlider from '../components/keenSlider'
-import {DOMAIN, menu} from '../utils'
+import {DOMAIN, menu} from '~/utils/common'
 import { getArticles, getProductsByCondition } from '../lib/api'
 
 const Home = ({ articles }) => {
