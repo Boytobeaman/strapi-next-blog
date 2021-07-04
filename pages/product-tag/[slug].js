@@ -3,7 +3,7 @@ import Products from '../../components/products'
 import Layout from '../../components/layout'
 import SEO from '../../components/SEO/SEO';
 import Link from 'next/link'
-import {DOMAIN, menu, productTagRoute} from '../../utils'
+import {DOMAIN, menu, productTagRoute} from '~/utils/common'
 import {compact, uniq, kebabCase,startCase } from 'lodash';
 import { getProducts, getCategories, getProductsByCondition } from '../../lib/api'
 
