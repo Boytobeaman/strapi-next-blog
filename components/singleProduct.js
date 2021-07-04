@@ -21,7 +21,7 @@ import {
   kgtolbs, 
   ltogal,
   productTagRoute
-} from '../utils'
+} from '~/utils/common'
 
 class SingleProduct extends React.Component{
 
