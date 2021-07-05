@@ -26,6 +26,9 @@ const SectionWrapper = styled.div`
       padding: 20px;
       background-color: rgba(0,0,0,0.6);
       max-width: 650px;
+      >h2{
+        font-size: 1.75rem;
+      }
     }
     @media (max-width: 575.98px) {
       .text-wrapper{
@@ -35,6 +38,9 @@ const SectionWrapper = styled.div`
         position: unset;
         top: unset;
         transform: inherit;
+        >h2{
+          font-size: 1rem;
+        }
       }
     }
   }
