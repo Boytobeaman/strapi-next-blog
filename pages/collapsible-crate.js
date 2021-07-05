@@ -25,7 +25,7 @@ const SectionWrapper = styled.div`
       transform: translateY(-50%);
       padding: 20px;
       background-color: rgba(0,0,0,0.6);
-      max-width: 600px;
+      max-width: 650px;
     }
     @media (max-width: 575.98px) {
       .text-wrapper{
