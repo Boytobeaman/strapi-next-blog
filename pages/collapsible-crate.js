@@ -25,6 +25,7 @@ const SectionWrapper = styled.div`
       transform: translateY(-50%);
       padding: 20px;
       background-color: rgba(0,0,0,0.6);
+      max-width: 600px;
     }
     @media (max-width: 575.98px) {
       .text-wrapper{
@@ -94,10 +95,17 @@ const Home = ({ products, catConfig }) => {
                 <h2 className="h6">Heavy Duty Plastic Collapsible Crate</h2>
                 <ul>
                   <li>Easy cleaning and visual inspection</li>
-                  <li>Hygiene</li>
+                  <li>Environmentally friendly as it is reuseable</li>
                   <li>Hot-stamp or molded-in logo</li>
-                  <li>Suitability for bar code and RFID tracking</li>
+                  <li>Suitable for daily tasks and storage, both indoors and out</li>
+                  <li>Great for moving, as a makeshift laundry basket, a toy organizer for the kids</li>
                 </ul>
+                <p className="d-none d-lg-block">
+                  The vented collapsible crate is terrific for dormitories, kitchens, and garages. These folding crates are the perfect storage when you need them, and fold up to store when you do not.
+                </p>
+                <p>
+                  We are a professional foldable crate manufauturer, MOQ is 200 pieces, competitive price for foldable plastic crates, do not hesitate to send us a inquiry!
+                </p>
               </div>
               
             </div>

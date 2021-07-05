@@ -79,34 +79,34 @@ export const menu = {
 
 export const footerConfig={
   friendlyLink:[
-    {
-      href: "https://www.plastic-tote.com/",
-      className: "footer-friendly-link",
-      target:"_blank",
-      rel: "noopener",
-      text: "plastic totes on sale",
-    },
-    {
-      href: "https://www.bulk-containers.com/",
-      className: "footer-friendly-link",
-      target:"_blank",
-      rel: "noopener",
-      text: "bulk plastic containers wholesale",
-    },
-    {
-      href: "https://www.vegcrates.com/",
-      className: "footer-friendly-link",
-      target:"_blank",
-      rel: "noopener",
-      text: "plastic fruit crates wholesale",
-    },
-    {
-      href: "https://www.joinplastic.com/product-category/bottle-crate/",
-      className: "footer-friendly-link",
-      target:"_blank",
-      rel: "noopener",
-      text: "plastic beer bottle crates",
-    },
+    // {
+    //   href: "https://www.plastic-tote.com/",
+    //   className: "footer-friendly-link",
+    //   target:"_blank",
+    //   rel: "noopener",
+    //   text: "plastic totes on sale",
+    // },
+    // {
+    //   href: "https://www.bulk-containers.com/",
+    //   className: "footer-friendly-link",
+    //   target:"_blank",
+    //   rel: "noopener",
+    //   text: "bulk plastic containers wholesale",
+    // },
+    // {
+    //   href: "https://www.vegcrates.com/",
+    //   className: "footer-friendly-link",
+    //   target:"_blank",
+    //   rel: "noopener",
+    //   text: "plastic fruit crates wholesale",
+    // },
+    // {
+    //   href: "https://www.joinplastic.com/product-category/bottle-crate/",
+    //   className: "footer-friendly-link",
+    //   target:"_blank",
+    //   rel: "noopener",
+    //   text: "plastic beer bottle crates",
+    // },
 
   ],
   footerCopyright: `${(new Date()).getFullYear()} © pallet-wholesale.com ©  All Rights Reserved.`
