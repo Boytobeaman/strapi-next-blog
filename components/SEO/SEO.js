@@ -94,13 +94,21 @@ const SEO = ({
     name: "Breadcrumbs",
     itemListElement,
   }
+  let theImage = ''
+  if(seo.image){
+    if(seo.image.indexOf("http") === 0){
+      theImage = seo.image
+    }else{
+      theImage = `${siteUrl}${seo.image}`
+    }
+  }
 
   return (
     <>
       <Head>
         <title>{seo.title}</title>
         <meta name="description" content={seo.description} key="description" />
-        <meta name="image" content={seo.image ? `${siteUrl}${seo.image}` : ''} key="image" />
+        <meta name="image" content={theImage} key="image" />
       </Head>
       <script type="application/ld+json">
         {JSON.stringify(breadcrumb).replace(/\//g,'\\/')}
@@ -115,14 +123,14 @@ const SEO = ({
         type={article ? 'article' : null}
         title={facebook_title ? facebook_title : seo.title}
         description={facebook_description ? facebook_description : seo.description}
-        image={seo.image ? `${siteUrl}${seo.image}` : ''}
+        image={theImage}
         appID={facebookAppID}
       />
       <Twitter
         username={twitterUsername}
         title={twitter_title ? twitter_title : seo.title}
         description={twitter_description ? twitter_description : seo.description}
-        image={seo.image ? `${siteUrl}${seo.image}` : ''}
+        image={theImage}
       />
     </>
   );
