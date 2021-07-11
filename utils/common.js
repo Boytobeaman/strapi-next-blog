@@ -39,6 +39,13 @@ export const menu = {
     web_pro_cat_id: "60dfbe4b2aa35750e66f8ebf",
     showInUi: true
   },
+  foldingBin:{
+    url: '/collapsible-plastic-bins/',
+    text: 'Collapsible Plastic Bins',
+    product_identify_cat: 'folding bin',
+    web_pro_cat_id: "60eb130112677727cd9bc52a",
+    showInUi: true
+  },
   nestingBox:{
     url: '/distribution-containers/',
     text: 'Distribution Containers',
