@@ -2,6 +2,8 @@
 import React from 'react'
 // import { useStaticQuery, graphql } from 'gatsby';
 // import Img from 'gatsby-image';
+import Image from 'next/image'
+import pic1  from '~/public/imgs/plastic-crates-production-process.jpg'
 
 export default function Description(props) {
   // const imgs = useStaticQuery(graphql`
@@ -19,10 +21,7 @@ export default function Description(props) {
   return (
     <div className="all-product-common-desc p-3">
       <h4 className="section-title my-4">Production process</h4>
-      {/* <Img
-        fluid={imgs.p1.childImageSharp.fluid}
-        alt='plastic crates production process'
-      /> */}
+      <Image src={pic1} alt="plastic crates produce process" />
     </div>
   );
 }

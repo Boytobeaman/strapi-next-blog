@@ -8,7 +8,10 @@ const Product = ({ product, categories }) => {
   return (
     <Layout categories={categories}>
       <div className="">
-        <PlatformSingleProduct product={product} />
+        <PlatformSingleProduct
+          product_identify_cat={menu.foldingCrate.product_identify_cat}
+          product={product} 
+        />
       </div>
     </Layout>
   )

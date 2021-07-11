@@ -83,7 +83,6 @@ class SingleProduct extends React.Component{
       facebook_title,
       twitter_title,
       short_title,
-      product_identify_cat,
       // local_img,
       static_load,
       dynamic_load,
@@ -91,6 +90,8 @@ class SingleProduct extends React.Component{
       seo_category_slug,
       product = {}
     } = this.props.product;
+
+    const {product_identify_cat} = this.props
 
 
     let all_attributes = product.all_attributes || {}
@@ -134,6 +135,7 @@ class SingleProduct extends React.Component{
     });
 
 
+    console.log(`product_identify_cat=== ${product_identify_cat}`)
 
     return (
       <section className="section container-fluid product-detail-single">
@@ -364,8 +366,10 @@ class SingleProduct extends React.Component{
               </div>
               <div className="row mt-2">
                 <div className="col-sm-12">
+                  
                   <div className="bg-white p-3">
-                    <PostContent className="post-description single-product" content={content} />
+
+                    <PostContent className="post-description single-product" content={content ? content : description} />
                     {
                       menu.foldingCrate && product_identify_cat === menu.foldingCrate.product_identify_cat &&(
                         <FoldingCrate />

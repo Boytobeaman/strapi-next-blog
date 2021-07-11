@@ -3,6 +3,12 @@ import React from 'react'
 import { cdn_url } from '~/utils/common';
 // import { useStaticQuery, graphql } from 'gatsby';
 // import Img from 'gatsby-image';
+import Image from 'next/image'
+
+import collapsiblApplicationA from '~/public/imgs/collapsible-plastic-vegetable-crates-application.jpg'
+import collapsiblApplicationB from '~/public/imgs/collapsible-crates-application.jpg'
+import collapsiblApplicationC from '~/public/imgs/foldable-crates-delivery.png'
+import collapsiblApplicationD from '~/public/imgs/collapsible-crates-produce-process.jpg'
 
 export default function Description(props) {
   // const imgs = useStaticQuery(graphql`
@@ -54,14 +60,11 @@ export default function Description(props) {
       </div>
       <div>
         <div className="section-title h4 my-4">Plastic collapsible crates application</div>
-        {/* <Img
-          fluid={imgs.p1.childImageSharp.fluid}
-          alt='Plastic collapsible crates'
-        />
-        <Img
-          fluid={imgs.p2.childImageSharp.fluid}
-          alt='Plastic collapsible vegetable crates'
-        /> */}
+        <Image src={collapsiblApplicationB} alt="foldable boxes application" />
+        <Image src={collapsiblApplicationA} alt="collapsible crates application" />
+        <Image src={collapsiblApplicationD} alt="collapsible crates heavy duty" />
+        <div className="section-title h4 my-4">Package & delivery</div>
+        <Image src={collapsiblApplicationC} alt="collapsible crates application" />
       </div>
     </div>
   );
