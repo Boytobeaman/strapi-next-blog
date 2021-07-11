@@ -76,6 +76,7 @@ class SingleProduct extends React.Component{
       description,
       twitter_description,
       facebook_description,
+      links,
       backlinks,
       tags,
       title,
@@ -345,6 +346,17 @@ class SingleProduct extends React.Component{
                         </ul>
                       </div>
                     ) : null}
+                    {links && links.length ? (
+                      <div className="bk-links internal-links">
+                        <p className="mb-0">We also provide</p>
+                        {links.map((item, index) => {
+                          if(index !== links.length -1){
+                            return <a href={item.url} target="_blank">{item.keyword}, </a>
+                          }
+                          return <a href={item.url} target="_blank">{item.keyword}</a>
+                        })}
+                      </div>
+                    ): ""}
                     <HTMLContent className="bk-links" content={backlinks} />
                     <meta itemProp="description" content={description} />
                   </div>
