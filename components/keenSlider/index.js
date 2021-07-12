@@ -10,7 +10,7 @@ export default (props) => {
   const timer = React.useRef();
   const autoPlayProps ={
     loop: true,
-    duration: 2000,
+    duration: 3000,
     dragStart: () => {
       setPause(true);
     },
@@ -63,7 +63,7 @@ export default (props) => {
         if (!pause && slider) {
           slider.next();
         }
-      }, 2000);
+      }, 3000);
       return () => {
         clearInterval(timer.current);
       };
