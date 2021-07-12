@@ -102,7 +102,7 @@ const Home = ({ products, catConfig }) => {
                 <ul>
                   <li>Easy cleaning and visual inspection</li>
                   <li>Environmentally friendly as it is reuseable</li>
-                  <li>Hot-stamp or molded-in logo</li>
+                  <li>Ventilation design, air holes are evenly distributed</li>
                   <li>Suitable for daily tasks and storage, both indoors and out</li>
                   <li>Great for moving, as a makeshift laundry basket, a toy organizer for the kids</li>
                 </ul>

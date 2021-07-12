@@ -100,11 +100,10 @@ const Home = ({ products, catConfig }) => {
               <div className="text-wrapper">
                 <h2 className="h6">Collapsible plastic bins</h2>
                 <ul>
-                  <li>Easy cleaning and visual inspection</li>
+                  <li>Foldable and stackable to maximize truck and store space</li>
                   <li>Environmentally friendly as it is reuseable</li>
-                  <li>Hot-stamp or molded-in logo</li>
-                  <li>Suitable for daily tasks and storage, both indoors and out</li>
-                  <li>Great for moving, as a makeshift laundry basket, a toy organizer for the kids</li>
+                  <li>Special bottom designed Support cross stacking and stability for transport</li>
+                  <li>Ideal for farming, store wholesalers, restaurant caterers, industrial cargo, logistics company and warehouse</li>
                 </ul>
                 <p>
                   We are a professional foldable crate manufauturer, MOQ is 200 pieces, competitive price for foldable plastic bins, do not hesitate to send us a inquiry!
