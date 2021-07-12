@@ -96,10 +96,10 @@ class SingleProduct extends React.Component{
 
     let all_attributes = product.all_attributes || {}
     let product_images = product.images || []
+    let product_model = product.product_model || all_attributes.product_model;
 
 
-    const {
-      product_model,
+    let {
       external_long,
       external_width,
       external_height,
