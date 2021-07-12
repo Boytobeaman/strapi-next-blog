@@ -99,7 +99,6 @@ class SingleProduct extends React.Component{
     let product_videos = product.videos || []
     let product_model = product.product_model || all_attributes.product_model;
 
-
     let {
       external_long,
       external_width,
@@ -372,9 +371,9 @@ class SingleProduct extends React.Component{
 
                     <PostContent className="post-description single-product" content={content ? content : description} />
 
-                    { product_videos && product_videos.length > 0 (
-                      <div className="single-product-video-wrap">
-                        <video width="620" height="540" controls>
+                    { (product_videos && product_videos.length > 0) && (
+                      <div className="single-product-video-wrap mb-4">
+                        <video width="620" controls>
                           <source src={product_videos[0].url} type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
