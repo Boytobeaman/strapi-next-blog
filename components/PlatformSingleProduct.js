@@ -96,6 +96,7 @@ class SingleProduct extends React.Component{
 
     let all_attributes = product.all_attributes || {}
     let product_images = product.images || []
+    let product_videos = product.videos || []
     let product_model = product.product_model || all_attributes.product_model;
 
 
@@ -370,6 +371,15 @@ class SingleProduct extends React.Component{
                   <div className="bg-white p-3">
 
                     <PostContent className="post-description single-product" content={content ? content : description} />
+
+                    { product_videos && product_videos.length > 0 (
+                      <div className="single-product-video-wrap">
+                        <video width="620" height="540" controls>
+                          <source src={product_videos[0].url} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                    )}
                     {
                       menu.foldingCrate && product_identify_cat === menu.foldingCrate.product_identify_cat &&(
                         <FoldingCrate />
