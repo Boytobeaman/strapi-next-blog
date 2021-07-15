@@ -373,7 +373,7 @@ class SingleProduct extends React.Component{
 
                     { (product_videos && product_videos.length > 0) && (
                       <div className="single-product-video-wrap mb-4">
-                        <video width="620" controls>
+                        <video controls>
                           <source src={product_videos[0].url} type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
