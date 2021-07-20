@@ -156,7 +156,7 @@ class ProductDetailTemplateCat extends React.Component {
                 
                 {the_image && (
                     <Image
-                      src={`/${the_image}`}
+                      src={`${the_image}`}
                       alt={short_title}
                       width={200}
                       height={200}
