@@ -69,7 +69,7 @@ class ProductDetailTemplateCat extends React.Component {
     let the_image;
     if (images && images.length > 0 ) {
       the_image = images[0].path ? images[0].path : images[0].url
-      if(the_image.indexOf("http") !== 0){
+      if(the_image.indexOf("http") !== 0 && the_image.indexOf("/") !== 0){
         the_image=`/${the_image}`
       }
       
