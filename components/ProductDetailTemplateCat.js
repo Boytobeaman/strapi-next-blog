@@ -117,6 +117,7 @@ class ProductDetailTemplateCat extends React.Component {
                           alt={short_title}
                           height={260}
                           width={260}
+                          minimumCacheTTL={259200}
                         />
                     )}
                 </div>
@@ -160,6 +161,7 @@ class ProductDetailTemplateCat extends React.Component {
                       alt={short_title}
                       width={200}
                       height={200}
+                      minimumCacheTTL={259200}
                     />
                 )}
                 
