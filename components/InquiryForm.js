@@ -87,6 +87,13 @@ export default class InquiryForm extends React.Component {
     if(this.state.sending){
       return
     }
+
+    let thisForm = document.querySelector("form[name='contact']")
+    if(!thisForm.checkValidity()){
+      thisForm.reportValidity()
+      return
+    }
+
     this.setState({ sending: true });
     var _this = this
     axios({
@@ -179,13 +186,13 @@ export default class InquiryForm extends React.Component {
                 </div>
                 <div className="row">
                   <div className="field form-group mb-1 col-sm-6">
-                    <label className="label" htmlFor={"name"} >Your name</label>
+                    <label className="label" htmlFor={"name"} >Your name <span className="text-danger">(Required)</span></label>
                     <div className="control">
                       <input className="input form-control" type={"text"} name={"name"} onChange={this.handleChange} id={"name"} required={true} />
                     </div>
                   </div>
                   <div className="field form-group mb-1 col-sm-6">
-                    <label className="label" htmlFor={"email"}>Email</label>
+                    <label className="label" htmlFor={"email"}>Email <span className="text-danger">(Required)</span></label>
                       <div className="control">
                         <input className="input form-control" type={"email"} name={"email"} onChange={this.handleChange} id={"email"} required={true} />
                       </div>
@@ -197,7 +204,7 @@ export default class InquiryForm extends React.Component {
                       </div>
                   </div>
                   <div className="field form-group mb-1 col-sm-6">
-                    <label className="label" htmlFor={"product_quantity"}>Product quantity</label>
+                    <label className="label" htmlFor={"product_quantity"}>Product quantity <span className="text-danger">(Required)</span></label>
                       <div className="control">
                         <input className="input form-control" placeholder="" type={"text"} name={"product_quantity"} onChange={this.handleChange} id={"product_quantity"} required={true} />
                       </div>
