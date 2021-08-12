@@ -121,3 +121,25 @@ export const footerConfig={
 
 
 export const productTagRoute = "product-tag"
+
+
+
+export function throttle(fn, time){
+  let oldTime = 0
+
+  
+  //不能return 箭头函数，
+  //箭头函数没有自己的this
+  //Does not have arguments, or new.target keywords
+  //箭头函数 Not suitable for call, apply and bind methods
+  return function() {
+    let nowTime = (new Date()).getTime();
+    if(nowTime - oldTime > time){
+
+      fn.call(this, ...arguments)
+      
+      oldTime = nowTime
+    }
+  }
+
+}

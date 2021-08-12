@@ -8,7 +8,8 @@ import {
   inquiry_handle_email_url,
   inquiry_api_success_code,
   company_name,
-  remote_ip_url
+  remote_ip_url,
+  throttle
 } from '~/utils/common'
 import axios from 'axios';
 import { func } from "prop-types";
@@ -77,6 +78,8 @@ export default class InquiryForm extends React.Component {
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
+
+  throttledSubmit = throttle(this.handleSubmit, 1000);
 
   handleSubmit = e => {
     e.preventDefault();
@@ -160,7 +163,7 @@ export default class InquiryForm extends React.Component {
                 // action="/contact/thanks/?no-cache=1"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
-                onSubmit={this.handleSubmit}
+                onSubmit={this.throttledSubmit}
                 className="contact-us"
               >
                 {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
