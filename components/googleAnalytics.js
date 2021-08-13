@@ -1,17 +1,13 @@
-import Document, { Head } from 'next/document';
+import Script from 'next/script'
 import { google_tracking_id } from "~/config/globalVariable"
 
-export default class MyDocument extends Document {
-  render() {
-    return (
-      // ...
-      <Head>
-        <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${google_tracking_id}`}
-        />
-
-        <script
+export default function Index() {
+  return (
+    <>
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${google_tracking_id}`}
+      />
+      <Script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -21,7 +17,6 @@ export default class MyDocument extends Document {
             `,
           }}
         />
-      </Head>
-    );
-  }
+    </>
+  )
 }
