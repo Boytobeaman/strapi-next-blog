@@ -10,13 +10,13 @@ const App = ({ Component, pageProps }) => {
 
   const router = useRouter();
 
-  const handleRouteChange = (url) => {
-    window.gtag('config', google_tracking_id, {
-      page_path: url,
-    });
-  };
-
   useEffect(() => {
+    const handleRouteChange = (url) => {
+      window.gtag('config', google_tracking_id, {
+        page_path: url,
+      });
+    };
+
     router.events.on('routeChangeComplete', handleRouteChange);
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange);
