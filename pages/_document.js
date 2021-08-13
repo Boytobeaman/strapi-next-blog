@@ -1,4 +1,4 @@
-import { Head } from 'next/document';
+import Document, { Head } from 'next/document';
 import { google_tracking_id } from "~/config/globalVariable"
 
 export default class MyDocument extends Document {
