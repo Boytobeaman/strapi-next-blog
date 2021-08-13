@@ -3,7 +3,8 @@ import '../assets/scss/all.scss'
 import '../components/cat-page-style.scss'
 import '../components/ProductDetailTemplate.scss'
 import { useRouter } from 'next/router';
-import { google_tracking_id } from "~/config/globalVariable"
+import { google_tracking_id } from "~/config/globalVariable";
+import { useEffect } from "react"
 
 const App = ({ Component, pageProps }) => {
 
