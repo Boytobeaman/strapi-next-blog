@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { kebabCase } from 'lodash'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import SEO from '~/components/SEO/SEO';
+import Products from '~/components/products'
 
 import InquiryForm from '../components/InquiryForm';
 import KeenSlider from '../components/keenSlider'
@@ -91,8 +92,7 @@ class SingleProduct extends React.Component{
       product = {}
     } = this.props.product;
 
-    const {product_identify_cat} = this.props
-
+    const {product_identify_cat, randomRelatedProducts, catConfig} = this.props
 
     let all_attributes = product.all_attributes || {}
     let product_images = product.images || []
@@ -408,6 +408,23 @@ class SingleProduct extends React.Component{
                   </div>
                 </div>
               </div>
+              {randomRelatedProducts &&(
+                <section className="row mt-2">
+                  <div className="col-sm-12">
+                    
+                    <div className="bg-white p-3">
+                      <h5>You might also like</h5>
+                      <Products
+                        product_identify_cat={product_identify_cat} 
+                        products={randomRelatedProducts}
+                        catConfig={catConfig}
+                        type="vertical"
+                      />
+                    </div>
+                  </div>
+                </section>
+              )}
+              
             </div>
           </div>
         </div>
