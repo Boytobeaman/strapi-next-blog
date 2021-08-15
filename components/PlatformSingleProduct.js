@@ -125,13 +125,13 @@ class SingleProduct extends React.Component{
     let contentArray = product_images.map(item => {
 
       return {
-        content: <Image alt={short_title} src={`${item.url}`} width={600} height={600}></Image>
+        content: <Image alt={short_title} key={item.url} src={`${item.url}`} width={600} height={600}></Image>
       } 
     });
 
     let thumbnailContentArray = product_images.map(item => {
 
-      return <Image alt={short_title} src={`${item?.formats?.thumbnail?.url ? item?.formats?.thumbnail?.url : item.url}`} width={100} height={100}></Image>
+      return <Image alt={short_title} key={item.url} src={`${item?.formats?.thumbnail?.url ? item?.formats?.thumbnail?.url : item.url}`} width={100} height={100}></Image>
     });
 
 
@@ -353,9 +353,9 @@ class SingleProduct extends React.Component{
                         <p className="mb-0">We also provide</p>
                         {links.map((item, index) => {
                           if(index !== links.length -1){
-                            return <a href={item.url} target="_blank">{item.keyword}, </a>
+                            return <a href={item.url} key={item.id} target="_blank">{item.keyword}, </a>
                           }
-                          return <a href={item.url} target="_blank">{item.keyword}</a>
+                          return <a href={item.url} key={item.id} target="_blank">{item.keyword}</a>
                         })}
                       </div>
                     ): ""}
