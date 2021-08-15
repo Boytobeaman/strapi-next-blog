@@ -104,12 +104,12 @@ const Home = ({ products, catConfig }) => {
                   <li>Environmentally friendly as it is reuseable</li>
                   <li>Ventilation design, air holes are evenly distributed</li>
                   <li>Suitable for daily tasks and storage, both indoors and out</li>
-                  <li>Great for moving, as a makeshift laundry basket, a toy organizer for the kids</li>
+                  <li className="d-none d-lg-block">Great for moving, as a makeshift laundry basket, a toy organizer for the kids</li>
                 </ul>
                 <p className="d-none d-lg-block">
                   The vented collapsible crate is terrific for dormitories, kitchens, and garages. These folding crates are the perfect storage when you need them, and fold up to store when you do not.
                 </p>
-                <p>
+                <p className="d-none d-lg-block">
                   We are a professional foldable crate manufauturer, MOQ is 200 pieces, competitive price for foldable plastic crates, do not hesitate to send us a inquiry!
                 </p>
               </div>

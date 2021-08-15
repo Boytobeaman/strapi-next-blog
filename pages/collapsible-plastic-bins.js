@@ -103,9 +103,9 @@ const Home = ({ products, catConfig }) => {
                   <li>Foldable and stackable to maximize truck and store space</li>
                   <li>Environmentally friendly as it is reuseable</li>
                   <li>Special bottom designed Support cross stacking and stability for transport</li>
-                  <li>Ideal for farming, store wholesalers, restaurant caterers, industrial cargo, logistics company and warehouse</li>
+                  <li className="d-none d-lg-block">Ideal for farming, store wholesalers, restaurant caterers, industrial cargo, logistics company and warehouse</li>
                 </ul>
-                <p>
+                <p className="d-none d-lg-block">
                   We are a professional foldable crate manufauturer, MOQ is 200 pieces, competitive price for foldable plastic bins, do not hesitate to send us a inquiry!
                 </p>
               </div>
