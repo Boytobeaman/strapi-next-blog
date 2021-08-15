@@ -86,7 +86,9 @@ class ProductDetailTemplateCat extends React.Component {
 
 
     if(show_attributes_config){
-      show_attributes_config = JSON.parse(show_attributes_config)
+      if(Object.prototype.toString.call(show_attributes_config) !== "[object Array]"){
+        show_attributes_config = JSON.parse(show_attributes_config)
+      }
       //取每个value的值
       show_attributes_config.forEach(element => {
         let value = element.value_content;
