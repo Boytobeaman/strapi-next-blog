@@ -10,6 +10,7 @@ import {
   ltogal,
   cdn_img_thumbnail
 } from '~/utils/common';
+import { cloneDeep } from "lodash"
 
 // import myImg from './a.jpg'
 
@@ -86,6 +87,7 @@ class ProductDetailTemplateCat extends React.Component {
 
 
     if(show_attributes_config){
+      show_attributes_config = cloneDeep(show_attributes_config)
       if(Object.prototype.toString.call(show_attributes_config) !== "[object Array]"){
         show_attributes_config = JSON.parse(show_attributes_config)
       }

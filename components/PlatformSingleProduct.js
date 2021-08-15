@@ -24,6 +24,8 @@ import {
   productTagRoute
 } from '~/utils/common'
 
+import { throttle } from "lodash"
+
 class SingleProduct extends React.Component{
 
   constructor(props) {
@@ -62,12 +64,14 @@ class SingleProduct extends React.Component{
     }
   }
 
+  throttledScrollEvent = throttle(this.listenScrollEvent, 800);
+
   componentDidMount() {
-    window.addEventListener('scroll', this.listenScrollEvent)
+    window.addEventListener('scroll', this.throttledScrollEvent)
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.listenScrollEvent)
+    window.removeEventListener('scroll', this.throttledScrollEvent)
   }
 
   render(){
@@ -155,21 +159,21 @@ class SingleProduct extends React.Component{
           <div className="product-detail-single-content">
               <nav aria-label="breadcrumb">
                 <ol className="breadcrumb bg-white my-2">
-                  <li className="breadcrumb-item">
+                  <li key={1} className="breadcrumb-item">
                     <Link href="/">
                       <a>
                         Home
                       </a>
                     </Link>
                   </li>
-                  <li className="breadcrumb-item">
+                  <li key={2} className="breadcrumb-item">
                     <Link href={parentLevelLink}>
                       <a>
                         {parentLevelLinkText}
                       </a>
                     </Link>
                   </li>
-                  <li className="breadcrumb-item active" aria-current="page">{short_title}</li>
+                  <li key={3} className="breadcrumb-item active" aria-current="page">{short_title}</li>
                 </ol>
               </nav>
               <div className="row" itemScope itemType="http://schema.org/Product">
