@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 import SEO from '../components/SEO/SEO'
 import Link from 'next/link'
 import Image from 'next/image'
-import {DOMAIN, menu } from '~/utils/common'
+import {DOMAIN, DOMAIN_ID, menu, productTagsRoute } from '~/utils/common'
 import { platform_root } from '~/config/globalVariable'
 import { getWebsiteProductsByCategory, graphqlFetchAPI } from '../lib/api'
 
@@ -21,7 +21,7 @@ const SectionWrapper = styled.div`
     .text-wrapper{
       color: #fff;
       position: absolute;
-      top: 50%;
+      top: 85%;
       transform: translateY(-50%);
       padding: 20px;
       background-color: rgba(0,0,0,0.6);
@@ -49,7 +49,7 @@ const SectionWrapper = styled.div`
 
 let product_identify_cat = menu.foldingCrate.product_identify_cat
 
-const Home = ({ products, catConfig }) => {
+const Home = ({ products, catConfig, website_product_tags }) => {
 
   // for facebook url
   let cat_link = products[0].seo_category_slug
@@ -57,7 +57,6 @@ const Home = ({ products, catConfig }) => {
   // need to change
   let cat_text = menu.foldingCrate.text
   let the_image = ``;
-  
 
   return (
     <Layout>
@@ -99,28 +98,21 @@ const Home = ({ products, catConfig }) => {
               </div>
               <div className="text-wrapper">
                 <h2 className="h6">Heavy Duty Plastic Collapsible Crate</h2>
-                <ul>
-                  <li>Easy cleaning and visual inspection</li>
-                  <li>Environmentally friendly as it is reuseable</li>
-                  <li>Ventilation design, air holes are evenly distributed</li>
-                  <li>Suitable for daily tasks and storage, both indoors and out</li>
-                  <li className="d-none d-lg-block">Great for moving, as a makeshift laundry basket, a toy organizer for the kids</li>
-                </ul>
-                <p className="d-none d-lg-block">
-                  The vented collapsible crate is terrific for dormitories, kitchens, and garages. These folding crates are the perfect storage when you need them, and fold up to store when you do not.
-                </p>
-                <p className="d-none d-lg-block">
-                  We are a professional foldable crate manufauturer, MOQ is 200 pieces, competitive price for foldable plastic crates, do not hesitate to send us a inquiry!
-                </p>
+                
               </div>
               
             </div>
+
+
             <Products
               product_identify_cat={product_identify_cat} 
               products={products}
               catConfig={catConfig}
+              website_product_tags={website_product_tags}
               type="vertical"
             />
+
+            
           </div>
         </section>
       </SectionWrapper>
@@ -138,13 +130,28 @@ export async function getStaticProps() {
   }
 
   let catConfigRes = await graphqlFetchAPI(
-    `query websiteProductCategory($id: ID!) {
+    `query websiteProductCategory($id: ID!, $DOMAIN_ID: ID!) {
         websiteProductCategory(id: $id){
           show_attributes_config
+          before_loop_content_html
+          after_loop_content_html
+        }
+        website(id: $DOMAIN_ID){
+          website_product_tags{
+            name
+            id
+            slug
+            website_products{
+              id
+            }
+          }
         }
       }
     `,
-    { variables: { id: menu.foldingCrate.web_pro_cat_id } },
+    { variables: { 
+      id: menu.foldingCrate.web_pro_cat_id,
+      DOMAIN_ID
+    } },
     `${platform_root}/graphql`
   )
   let catConfig = {}
@@ -152,13 +159,22 @@ export async function getStaticProps() {
     catConfig = catConfigRes.websiteProductCategory
   }
 
-  console.log(`catConfig = ${catConfig.data}`)
+  let website_product_tags = []
+  if(catConfigRes?.website?.website_product_tags){
+    website_product_tags = catConfigRes.website.website_product_tags.filter(i => i.website_products.length > 0)
+    website_product_tags.forEach(i => {
+      i.href = `/${productTagsRoute}/${i.slug}/`
+    })
+  }
+
 
   return {
     props: { 
       products,
-      catConfig
+      catConfig,
+      website_product_tags
     },
+    revalidate: 3600, // In seconds
   }
 }
 

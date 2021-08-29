@@ -11,6 +11,7 @@ export const company_name = 'joinplastic';
 export const remote_ip_url = 'https://api.db-ip.com/v2/free/self';
 
 export const DOMAIN='pallet-wholesale.com'
+export const DOMAIN_ID='6049912ccd49034b14b71f85'
 export const siteUrl='https://www.pallet-wholesale.com'
 export const twitterUsername='@PalletBoxSale'
 export const facebookAppID=''
@@ -120,7 +121,9 @@ export const footerConfig={
 }
 
 
-export const productTagRoute = "product-tag"
+export const productTagRoute = "product-tag";
+export const productTagsRoute = "product-tags";
+
 
 
 
@@ -142,4 +145,19 @@ export function throttle(fn, time){
     }
   }
 
+}
+
+//HTML标签转义（< -> &lt;）
+export function html2Escape(sHtml) {
+  return sHtml.replace(/[<>&"]/g, function(c) {
+    return { '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;' }[c];
+  });
+}
+
+//HTML标签反转义（&lt; -> <）
+export function escape2Html(str) {
+  var arrEntities = { lt: '<', gt: '>', nbsp: ' ', amp: '&', quot: '"' };
+  return str.replace(/&(lt|gt|nbsp|amp|quot);/gi, function(all, t) {
+    return arrEntities[t];
+  });
 }
