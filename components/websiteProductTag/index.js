@@ -1,6 +1,6 @@
 import React from 'react'
 import SectionWrapper from "./style"
-
+import Link from 'next/link'
 
 const Index = (props) => {
   
@@ -10,7 +10,9 @@ const Index = (props) => {
     <SectionWrapper>
       <div className="product-tag">
         {href ? (
-          <a href={href} target="_blank">{name}</a>
+          <Link href={href}>
+            {name}
+          </Link>
         ):
         <span>{name}</span>
         }
