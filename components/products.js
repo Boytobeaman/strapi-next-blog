@@ -67,7 +67,7 @@ const Products = ({ products, catConfig={}, website_product_tags=[], ...otherPro
             return (
               <>
                 {(website_product_tags.length && index  % 12 === 0) ? (
-                  <section className="website-product-tags" key={product.slug}>
+                  <section className="website-product-tags" key={`tags-${product.slug}`}>
                     {website_product_tags.map(website_product_tag => <WebsiteProductTag {...website_product_tag} />)}
                   </section>
                 ):null}

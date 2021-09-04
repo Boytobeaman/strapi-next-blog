@@ -76,6 +76,7 @@ class SingleProduct extends React.Component{
 
   render(){
     let {
+      slug,
       content,
       contentComponent,
       description,
@@ -119,6 +120,8 @@ class SingleProduct extends React.Component{
 
 
     let parentLevelLink = `/${seo_category_slug}/`
+    let thisProductLink = `/${seo_category_slug}/${slug}/`
+
     let parentLevelLinkText = seo_category
     const PostContent = contentComponent || Content
 
@@ -150,7 +153,7 @@ class SingleProduct extends React.Component{
           description = {description}
           twitter_description = {twitter_description}
           facebook_description = {facebook_description}
-          pathname = {parentLevelLink}
+          pathname = {thisProductLink}
           image = {product_images[0] ? product_images[0].url : ''}
 
         />
