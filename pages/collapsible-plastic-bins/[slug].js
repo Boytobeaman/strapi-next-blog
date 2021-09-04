@@ -69,11 +69,16 @@ export async function getStaticProps({ params}) {
 
   //获取相关产品
   let allCatProductsExcludeThis = products.filter(i => i.slug !== slug);
+  let thisProductIndex = products.findIndex(i => i.slug === slug)
+  let allProductLength = allCatProductsExcludeThis.length;
+  let endProductIndex = thisProductIndex + 6;
 
-  console.log(`allCatProductsExcludeThis`, allCatProductsExcludeThis.length)
-  //相关产品排除掉自己
-  let randomRelatedProducts = sampleSize(allCatProductsExcludeThis, 6)
-  console.log(`randomRelatedProduct`, randomRelatedProducts.length)
+  if(endProductIndex > allProductLength - 1){
+    endProductIndex = allProductLength
+  }
+  let startProductIndex = endProductIndex - 6;
+  let randomRelatedProducts = allCatProductsExcludeThis.slice(startProductIndex, endProductIndex)
+
 
   let product = products.find(i => i.slug === slug)
 
