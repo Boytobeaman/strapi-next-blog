@@ -19,7 +19,7 @@ const Home = ({ products,productTag, slug }) => {
 
   // for facebook url
   let cat_link = slug
-  cat_link= `${productTagRoute}/${cat_link}/`
+  cat_link= `/${productTagRoute}/${cat_link}/`
   // need to change
   let cat_text = productTag
   let the_image = ``;
@@ -29,16 +29,16 @@ const Home = ({ products,productTag, slug }) => {
       <section className="section product-cate-page">
         <SEO 
           thisTitleTemplate={`%s | ${cat_text} for sale`}
-          title={`${cat_text}, cheap ${cat_text}, Ideal for transportation`}
-          description = {`Wholesale ${cat_text}, cheap ${cat_text} for sale, ideal for all your bulk storage requirements, allow for easy access by conventional forklifts or pallet trucks`}
+          title={`${cat_text}, cheap ${cat_text}, ${cat_text} wholesale`}
+          description = {`Wholesale ${cat_text}, cheap ${cat_text} for sale, ${cat_text} supplier, high quality ${cat_text}`}
           pathname = {`${cat_link}`}
           image = {the_image ? the_image : ''}
-          position = '3'
-          ratingValue = '4.7'
-          reviewCount = '218'
-          price = '96.99'
-          lowPrice = '80.99'
-          highPrice = '120.39'
+          // position = '3'
+          // ratingValue = '4.7'
+          // reviewCount = '218'
+          // price = '96.99'
+          // lowPrice = '80.99'
+          // highPrice = '120.39'
         />
         <div className="container-fluid">
           <nav aria-label="breadcrumb">
