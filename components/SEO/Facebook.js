@@ -16,6 +16,7 @@ export default ({
     {title && <meta property="og:title" content={title} />}
     {description && <meta property="og:description" content={description} />}
     {image && <meta property="og:image" content={image} />}
+    {image && <meta property="og:image:alt" content={title} />}
     {appID && <meta property="fb:app_id" content={appID} />}
   </Head>
 );

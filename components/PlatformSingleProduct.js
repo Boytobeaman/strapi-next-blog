@@ -149,6 +149,7 @@ class SingleProduct extends React.Component{
       <section className="section container-fluid product-detail-single">
         <SEO 
           title={title}
+          short_title={short_title}
           twitter_title = {twitter_title}
           facebook_title = {facebook_title}
           description = {description}

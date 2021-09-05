@@ -2,11 +2,11 @@ import React from 'react';
 import Head from 'next/head'
 
 export default ({
-  cardType = 'summary_large_image',
+  cardType = 'summary',
   username = null,
   title = null,
   description = null,
-  image = null,
+  image = null
 }) => (
   <Head>
     <meta name="twitter:card" content={cardType} />
@@ -14,5 +14,6 @@ export default ({
     {title && <meta name="twitter:title" content={title} />}
     {description && <meta name="twitter:description" content={description} />}
     {image && <meta name="twitter:image" content={image} />}
+    {image && <meta name="twitter:image:alt" content={title} />}
   </Head>
 );
