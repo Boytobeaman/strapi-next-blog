@@ -21,7 +21,7 @@ import {
   mmtoinch, 
   kgtolbs, 
   ltogal,
-  productTagRoute
+  productTagsRoute
 } from '~/utils/common'
 
 import { throttle } from "lodash"
@@ -85,6 +85,7 @@ class SingleProduct extends React.Component{
       links,
       backlinks,
       tags,
+      website_product_tags,
       title,
       facebook_title,
       twitter_title,
@@ -343,13 +344,13 @@ class SingleProduct extends React.Component{
                           )}
                       </tbody>
                     </table>
-                    {tags && tags.length ? (
+                    {website_product_tags && website_product_tags.length ? (
                       <div style={{ marginTop: `1rem` }}>
                         <h4>Tags</h4>
                         <ul className="taglist">
-                          {tags.map(tag => (
-                            <li key={tag + `tag`}>
-                              <Link href={`/${productTagRoute}/${kebabCase(tag)}/`}><a>{tag}</a></Link>
+                          {website_product_tags.map(tag => (
+                            <li key={tag.slug}>
+                              <Link href={`/${productTagsRoute}/${tag.slug}/`}><a>{tag.name}</a></Link>
                             </li>
                           ))}
                         </ul>
