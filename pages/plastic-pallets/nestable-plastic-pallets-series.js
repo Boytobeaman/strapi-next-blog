@@ -1,14 +1,32 @@
+import React, { useState } from 'react'
 import PlatformSingleSeriesProduct from '../../components/PlatformSingleSeriesProduct'
+import InquiryForm from '~/components/InquiryForm';
 import { getCategory, getCategories, getProduct, getProductsByCondition, getProductAttributesByCategory, getProductsByCategory } from '../../lib/api'
 import Layout from '../../components/layout'
 import {DOMAIN, menu } from '~/utils/common'
 import { platform_root, attributes_path, products_path } from '~/config/globalVariable'
-import { Table, Button } from 'reactstrap';
+import { Table, Button, Modal, ModalHeader, ModalBody, ModalFooter  } from 'reactstrap';
 
 
 
-const Product = ({ series_attributes, series_products }) => {
-  debugger
+const Product = (props) => {
+
+  const { series_attributes, series_products } = props;
+  const [modal, setModal] = useState(false)
+
+  const toContactUs = (e,product_model,p_img) => {
+    e.preventDefault();
+    localStorage.setItem("from_url", window.location.href)
+    localStorage.setItem("model", product_model)
+    localStorage.setItem("p_img", p_img)
+    // navigateTo(contact_url)
+    setModal(true)
+    return false
+  }
+
+  const toggle = () => {
+    setModal(!modal)
+  }
 
   let slug = `nestable-plastic-pallets-series`
   let short_title = `nestable plastic pallets`
@@ -118,7 +136,7 @@ If you have another question, pls feel free to contact us</p>
                         <Button 
                           color="danger" 
                           size="sm"
-                          onClick={(e)=>this.toContactUs(e,product_model,image)}
+                          onClick={(e)=>toContactUs(e,product_model,image)}
                         > Inquiry</Button>
                       </td>
                       <td>{image ? <img style={{maxWidth: 180}} src={image}></img> : null}</td>
@@ -152,6 +170,15 @@ If you have another question, pls feel free to contact us</p>
           rightContent={rightContent}
           bottomContent={bottomContent}
         />
+        <Modal isOpen={modal} toggle={toggle} className={props.className} backdrop="static">
+          <ModalHeader toggle={toggle}>Contact us & Inquiry <span className="text-danger"></span></ModalHeader>
+          <ModalBody>
+            <InquiryForm />
+          </ModalBody>
+          <ModalFooter>
+            <Button color="secondary" className="btn-sm" onClick={toggle}>Close</Button>
+          </ModalFooter>
+        </Modal>
       </div>
     </Layout>
   )

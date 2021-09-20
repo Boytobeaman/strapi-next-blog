@@ -3,11 +3,9 @@ import Card from './card'
 import Link from 'next/link'
 import Image from 'next/image'
 import { kebabCase } from 'lodash'
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import SEO from '~/components/SEO/SEO';
 import Products from '~/components/products'
 
-import InquiryForm from '../components/InquiryForm';
 import KeenSlider from '../components/keenSlider'
 import Content, { HTMLContent } from '../components/Content'
 import NestingBox from './productDesc/NestingBox'
@@ -31,30 +29,13 @@ class SingleProduct extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      modal: false,
-      inquiryBtnClass: '',
+
     };
 
-    this.toggle = this.toggle.bind(this);
+
   }
 
-  toContactUs(e,product_model,p_img){
-    e.preventDefault();
-    localStorage.setItem("from_url", window.location.href)
-    localStorage.setItem("model", product_model)
-    localStorage.setItem("p_img", p_img)
-    // navigateTo(contact_url)
-    this.setState({
-      modal: true
-    });
-    return false
-  }
 
-  toggle() {
-    this.setState(prevState => ({
-      modal: !prevState.modal
-    }));
-  }
 
   listenScrollEvent = e => {
     if (window.scrollY > 450) {
@@ -208,15 +189,7 @@ class SingleProduct extends React.Component{
             </div>
           </div>
         </div>
-        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className} backdrop="static">
-          <ModalHeader toggle={this.toggle}>Contact us & Inquiry <span className="text-danger"></span></ModalHeader>
-          <ModalBody>
-            <InquiryForm />
-          </ModalBody>
-          <ModalFooter>
-            <Button color="secondary" className="btn-sm" onClick={this.toggle}>Close</Button>
-          </ModalFooter>
-        </Modal>
+
       </section>
     )
   }
