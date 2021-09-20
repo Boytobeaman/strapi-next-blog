@@ -10,7 +10,7 @@ export default (props) => {
   const timer = React.useRef();
   const autoPlayProps ={
     loop: true,
-    duration: 3000,
+    duration: 4000,
     dragStart: () => {
       setPause(true);
     },
@@ -63,11 +63,22 @@ export default (props) => {
         if (!pause && slider) {
           slider.next();
         }
-      }, 3000);
+      }, 4000);
       return () => {
         clearInterval(timer.current);
       };
     }, [pause, slider]);
+  }
+
+  const resetTimer = () => {
+    if(timer.current){
+      clearInterval(timer.current);
+    }
+    timer.current = setInterval(() => {
+      if (!pause && slider) {
+        slider.next();
+      }
+    }, 4000);
   }
 
   const contentArray = props.contentArray;
@@ -107,6 +118,7 @@ export default (props) => {
                 key={idx}
                 onClick={() => {
                   console.log(idx);
+                  resetTimer();
                   slider.moveToSlideRelative(idx);
                 }}
                 className={styles.dot + (currentSlide === idx ? ` ${styles.active}` : "")}
@@ -126,6 +138,7 @@ export default (props) => {
                 }
                 onClick={() => {
                   console.log(idx);
+                  resetTimer();
                   slider.moveToSlideRelative(idx);
                 }}
               >
