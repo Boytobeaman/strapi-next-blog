@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@types/styled-components": "^5.1.11",
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "bootstrap": "^4.5.0",
     "keen-slider": "^5.2.4",
     "lodash": "^4.17.19",
