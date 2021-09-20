@@ -78,6 +78,7 @@ const Product = (props) => {
 
   let rightContent=(
     <div className="bg-white p-3">
+      <h1 className="h4 text-capitalize mb-3">{short_title}</h1>
       <h4>HDPE/PP material (made with new material)</h4>
 
       <h5>How long is your delivery time?</h5>

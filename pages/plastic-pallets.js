@@ -16,12 +16,12 @@ const Home = ({ products }) => {
   // need to change
   let cat_text = menu.pallet.text
   let the_image = ``;
-
   let nestable_plastic_pallet_slug= `nestable-plastic-pallets-series`
 
   let nestable_plastic_pallet = {
     id: "nestable_plastic_pallet",
     slug: nestable_plastic_pallet_slug,
+    short_title: "nestable plastic pallets",
     seo_category_slug: cat_link,
     commonproduct:{
       product_model: "nestable plastic pallets series"
