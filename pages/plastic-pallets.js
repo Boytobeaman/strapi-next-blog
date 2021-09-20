@@ -16,6 +16,28 @@ const Home = ({ products }) => {
   // need to change
   let cat_text = menu.pallet.text
   let the_image = ``;
+
+  let nestable_plastic_pallet_slug= `nestable-plastic-pallets-series`
+
+  let nestable_plastic_pallet = {
+    id: "nestable_plastic_pallet",
+    slug: nestable_plastic_pallet_slug,
+    seo_category_slug: cat_link,
+    commonproduct:{
+      product_model: "nestable plastic pallets series"
+    },
+    local_img: [
+      {
+        path: `imgs/pallet-wholesale.com/img/plastic-pallets/${nestable_plastic_pallet_slug}/nestable-plastic-pallets-1.jpeg`
+      }
+      
+    ]
+
+  }
+  if(!products.find(i => i.id === nestable_plastic_pallet.id)){
+    products.push(nestable_plastic_pallet)
+  }
+
   
 
   return (
