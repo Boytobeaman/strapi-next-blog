@@ -82,18 +82,20 @@ const Home = ({ articles }) => {
               </Link>
             </div>
             <div className="col-sm-3">
-              <a className="nav-link text-white font-weight-bold pb-0" href="https://www.movingboxsale.com/folding-crates/" target="_blank">
-                <Image 
-                  alt={`Plastic Folding Crates`} 
-                  src={`/imgs/folding-crates.jpg`} 
-                  width="300" 
-                  height="250"
-                  layout="responsive"
-                />
-                <p className="home-page-cat-text text-center">
-                  Folding Crates
-                </p>
-              </a>
+              <Link href={menu.foldingCrate.url}>
+                <a className="nav-link text-white font-weight-bold pb-0">
+                  <Image 
+                    alt={`Plastic Folding Crates`} 
+                    src={`/imgs/folding-crates.jpg`} 
+                    width="300" 
+                    height="250"
+                    layout="responsive"
+                  />
+                  <p className="home-page-cat-text text-center">
+                    Folding Crates
+                  </p>
+                </a>
+              </Link>
             </div>
             <div className="col-sm-3">
             <a className="nav-link text-white font-weight-bold pb-0" href="https://www.movingboxsale.com/moving-bins/" target="_blank">
@@ -133,7 +135,8 @@ const Home = ({ articles }) => {
                     offering custom pallet solutions for moving, storing or displaying products at every point along your supply chain! 
                   </p>
                   <p>
-                    OEM service are designed to provide you with customized services by predicting your desires and needs.
+                  Our team is focused on developing excellent solutions for our customers seeking the right product to meet their specific needs. 
+                  Our goal is to build win-win relationships with all our customers, big or small.
                   </p>
                   <p>
                    Plastic pallets protect your product during picking, assembly, processing, storage and distribution in a wide variety of industries including food and beverage, primary packaging, retail distribution, automotive, pharmaceutical, and many others. 
@@ -188,7 +191,6 @@ const Home = ({ articles }) => {
                   <ul>
                     <li>Wholesale Pricing</li>
                     <li>Quality assurance</li>
-                    <li>Light, space-saving, and reliable</li>
                   </ul>
                   <div className="text-left">
                     <h6>Pallets intended for moderate reuse applications. Depending on the style of plastic pallet, some models are much lighter weight, and thus are easier to handle than wood pallets, plastic pallets that can be used for various industries and applications. </h6>

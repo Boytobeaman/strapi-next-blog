@@ -13,7 +13,7 @@ export default class Footer extends React.Component{
     return (
       <footer className="footer w-100 position-absolute bg-secondary py-3" style={{ bottom: '0' }}>
         <div className="footer-logo text-center my-2">
-          <Image alt="moving crates stack logo" src={`/imgs/logo-stack.png`} width="100" height="80"></Image>
+          <Image alt="plastic pallets stack logo" src={`/imgs/pallet-wholesale-stack-trans.png`} width="120" height="80"></Image>
         </div>
         <div className="footer-social pt-2">
           <a title="facebook" href={facebook_url} target="_blank" rel="nofollow noopener" className="footer-social-link">

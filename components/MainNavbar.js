@@ -61,7 +61,7 @@ export default class MainNavbar extends React.Component{
       <Navbar color="dark" dark className="fixed-top border-bottom" expand="md" id="mainNavbar" itemScope='' itemType="http://schema.org/SiteNavigationElement">
         <NavbarBrand className="py-0" href="/">
           <figure className="image mb-0">
-            <Image alt="moving crates logo" src={`/imgs/header-icon-grey.png`} width="160" height="40"></Image>
+            <Image alt="plastic pallets logo" src={`/imgs/pallet-header-logo-trans.png`} width="160" height="40"></Image>
           </figure>
         </NavbarBrand>
         <NavbarToggler onClick={this.toggleNavbar} />

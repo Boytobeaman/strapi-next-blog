@@ -3,7 +3,7 @@ import PlatformSingleSeriesProduct from '../../components/PlatformSingleSeriesPr
 import InquiryForm from '~/components/InquiryForm';
 import { getCategory, getCategories, getProduct, getProductsByCondition, getProductAttributesByCategory, getProductsByCategory } from '../../lib/api'
 import Layout from '../../components/layout'
-import {DOMAIN, menu } from '~/utils/common'
+import {DOMAIN, menu, mmtoinch, kgtolbs } from '~/utils/common'
 import { platform_root, attributes_path, products_path } from '~/config/globalVariable'
 import { Table, Button, Modal, ModalHeader, ModalBody, ModalFooter  } from 'reactstrap';
 
@@ -111,10 +111,10 @@ If you have another question, pls feel free to contact us</p>
             <th>Model</th>
             <th>Action</th>
             <th>Image</th>
-            <th>Size(mm) L*W*H</th>
+            <th>Size L*W*H</th>
             <th>Dynamic load(T)</th>
             <th>Static load(T)</th>
-            <th>Weight(KG)</th>
+            <th>Weight</th>
           </tr>
         </thead>
         <tbody>
@@ -130,7 +130,8 @@ If you have another question, pls feel free to contact us</p>
             let all_attributes = series_product.all_attributes
             let product_model = series_product.product_model
 
-            let size = `${all_attributes.product_length} x ${all_attributes.product_width} x ${all_attributes.product_height}`
+            let size_mm = `${all_attributes.product_length} x ${all_attributes.product_width} x ${all_attributes.product_height} (mm)`
+            let size_inch  = `${(all_attributes.product_length * mmtoinch).toFixed(2)} x ${(all_attributes.product_width * mmtoinch).toFixed(2)} x ${(all_attributes.product_height * mmtoinch).toFixed(2)} (inch)`
             return  <tr key={series_product.id}>
                       <td>{product_model}</td>
                       <td>
@@ -141,14 +142,23 @@ If you have another question, pls feel free to contact us</p>
                         > Inquiry</Button>
                       </td>
                       <td>{image ? <img style={{maxWidth: 180}} src={image}></img> : null}</td>
-                      <td>{size}</td>
+                      <td>
+                        {size_mm} 
+                        <hr/>
+                        {size_inch} 
+                      </td>
                       <td>{all_attributes.dynamic_load}</td>
                       <td>{all_attributes.static_load}</td>
-                      <td>{all_attributes.weight}</td>
+                      <td>{all_attributes.weight} (KG) <hr/> {(all_attributes.weight * kgtolbs).toFixed(2)} (lbs) </td>
                     </tr>
           })}
         </tbody>
       </Table>
+
+      <p>
+        The nestable plastic pallet provides fantastic protection for goods and functions well in extreme climatic conditions. It has advanced design that provides improved support for goods and is perfect for crates and bins. 
+        Also, this pallet has feet that are designed specifically to prevent them from sticking to ice.
+      </p>
     </div>
   )
 
