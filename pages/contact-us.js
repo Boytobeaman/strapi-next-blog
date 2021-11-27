@@ -11,7 +11,9 @@ import {
   inquiry_handle_base_url,
   inquiry_handle_app_name,
   inquiry_handle_inquiry_url,
-  inquiry_handle_email_url
+  inquiry_handle_email_url,
+  contact_phone_one,
+  contact_phone_two,
 } from '~/utils/common';
 
 
@@ -71,8 +73,8 @@ const ContactUs = ({ products }) => {
                 
                 <h5>Call us: </h5>
                 <div className="alert alert-secondary" role="alert">
-                  <p className="mb-0">(+86)021-59117621</p>
-                  <p className="mb-0">(+86)18217103917</p>
+                  <p className="mb-0">{contact_phone_one}</p>
+                  <p className="mb-0">{contact_phone_two}</p>
                 </div>
                 
                 
