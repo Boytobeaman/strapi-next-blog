@@ -3,6 +3,9 @@
 Strapi is the #1 open source headless CMS frontend developers all over the world love. You can easily and quickly manage your content through an API and it's entirely made with Javascript (Node & React).
 
 To make everything a bit easier, we created a [blog starter](https://github.com/strapi/strapi-starter-next-blog) containing a Strapi instance for managing your blog and a Next.js frontend.
+Website:
+[Plastic pallet](https://www.pallet-wholesale.com/)
+
 
 ## Deploy Your Strapi Instance
 
