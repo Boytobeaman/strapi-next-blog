@@ -152,7 +152,7 @@ export async function getStaticProps() {
       id: menu.foldingCrate.web_pro_cat_id,
       DOMAIN_ID
     } },
-    `${platform_root}/graphql`
+    `${platform_root}/graphql?token=${process.env.TOKEN}`
   )
   let catConfig = {}
   if(catConfigRes && catConfigRes.websiteProductCategory){

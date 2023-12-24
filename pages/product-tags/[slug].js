@@ -85,7 +85,7 @@ export async function getStaticPaths() {
       }
 
     } },
-    `${platform_root}/graphql`
+    `${platform_root}/graphql?token=${process.env.TOKEN}`
   )
 
 
@@ -174,7 +174,7 @@ export async function getStaticProps({params}) {
         website: DOMAIN_ID
       }
     } },
-    `${platform_root}/graphql`
+    `${platform_root}/graphql?token=${process.env.TOKEN}`
   )
 
   let thisTagProducts = []
