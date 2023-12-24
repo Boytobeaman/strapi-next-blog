@@ -17,6 +17,7 @@
     "paths": {
       "~/components/*": ["components/*"],
       "~/config/*": ["config/*"],
+      "~/lib/*": ["lib/*"],
       "~/assets/*": ["assets/*"],
       "~/utils/*": ["utils/*"],
       "~/public/*": ["public/*"],

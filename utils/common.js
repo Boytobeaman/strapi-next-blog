@@ -27,6 +27,7 @@ export const cdn_img_thumbnail = `${cdn_url}/static/noimage_thumbnail.png`;
 export const defaultTitle = `pallet wholesale`;
 export const defaultDescription = `pallet wholesale description`;
 
+export const blog_path='/blogs'
 
 
 export const menu = {
@@ -81,6 +82,11 @@ export const menu = {
   about:{
     url: '/about-us/',
     text: 'About Us',
+    showInUi: true
+  },
+  blogs:{
+    url: '/blogs/',
+    text: 'Blogs',
     showInUi: true
   }
 }

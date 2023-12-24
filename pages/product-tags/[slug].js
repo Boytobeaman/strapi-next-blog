@@ -6,7 +6,7 @@ import Link from 'next/link'
 import {DOMAIN, menu,DOMAIN_ID, productTagsRoute} from '~/utils/common'
 import { platform_root } from '~/config/globalVariable'
 import {compact, uniq, kebabCase,startCase } from 'lodash';
-import { getProducts, getCategories, getProductsByCondition, graphqlFetchAPI } from '../../lib/api'
+import { getProducts, getCategories, getProductsByCondition, graphqlFetchAPI } from '~/lib/api'
 
 
 let _ = {

@@ -17,6 +17,13 @@ body{
   }
 }
 
+.cursor-pointer{
+  cursor: pointer;
+}
+.article-title:hover{
+  background-color: #ced4da;
+}
+
 body,
 body>div,
 body>div>div,
