@@ -225,13 +225,11 @@ export default class InquiryForm extends React.Component {
                 <div className="field form-group mb-0">
                   <button className="button btn btn-danger is-link" type='button' onClick={this.throttledSubmit}>{this.state.sending?'Processing':'Send'}</button>
                 </div>
-                <p className="small mt-1">Email will be send to {contact_email}, if you do not get email sent successful response, please alternatively <a className="" href={`mailto:${contact_email}?subject=Inquiry about your plastic crate`}>Send email</a> using your email client.</p>
               </form>
               {this.state.showThanks &&(
                 <div className="mt-1 bg-light rounded shadow-lg">
                   <div className="alert alert-success" role="alert">
                       <h4>Thank you!</h4>
-                      <p className="mb-1">Email had been sent to <span className="font-weight-bold">{contact_email || 'seller006@joinplastic.com'}</span></p>
                       <p>We will check the email and come back to you as soon as possible!</p>
                   </div>
                 </div>

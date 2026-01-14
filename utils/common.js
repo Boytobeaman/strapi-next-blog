@@ -31,9 +31,10 @@ export const blog_path='/blogs'
 
 
 export const menu = {
-  home:{
-    url:'/',
-    text: 'Home',
+  pallet:{
+    url: '/plastic-pallets/',
+    text: 'Plastic Pallets',
+    product_identify_cat: 'pallet',
     showInUi: true
   },
   foldingCrate:{
@@ -61,12 +62,6 @@ export const menu = {
     text: 'Euro Containers',
     product_identify_cat: 'stacking crate',
     showInUi: false
-  },
-  pallet:{
-    url: '/plastic-pallets/',
-    text: 'Plastic Pallets',
-    product_identify_cat: 'pallet',
-    showInUi: true
   },
   palletBox:{
     url: '/bulk-storage-containers/',

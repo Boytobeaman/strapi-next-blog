@@ -28,7 +28,7 @@ const ContactUs = ({ products }) => {
     <Layout>
       <section className="section">
         <SEO 
-          title={`About us, plastic products supplier`}
+          title={`About us, plastic pallets products supplier`}
           description = {`Wholesale description`}
           pathname = {`${cat_link}`}
         />
@@ -50,19 +50,14 @@ const ContactUs = ({ products }) => {
                 <InquiryForm />
               </div>
               <div className="col-md-6">
-                <h5>Our services:</h5>
+                <h5>Reliable Plastic Pallet and Crates Manufacturer</h5>
                 <div className="mb-1">
-                  <ul className="list-group">
-                    <li className="list-group-item">
-                      Add customer logo on the crate.
-                    </li>
-                    <li className="list-group-item">
-                      We could customize color for the crate, regular color is blue, grey.
-                    </li>
-                    <li className="list-group-item">
-                      MOQ for bulk order: Normally 300 pcs, but could be negotiated in circumstance
-                    </li>
-                  </ul>
+                  <p>Looking for durable, cost-effective plastic pallets, plastic bulk containers,plastic crates or other plastic products for your business? Our experienced team is ready to deliver timely support and tailored solutions to meet your needs.</p>
+                
+                </div>
+                <h5>For wholesale orders</h5>
+                <div className="mb-1">
+                  <p>we keep consistent inventory of standard products for quick dispatch. To maximize production efficiency and shipping cost savings, kindly provide your product specifications, order quantities, and desired delivery schedule for an accurate and timely quotation.</p>
                 
                 </div>
                 <h5>Our location:</h5>
@@ -71,26 +66,83 @@ const ContactUs = ({ products }) => {
                   <p className="mb-0">Anting county,Jiading District, Shanghai, China</p>
                 </div>
                 
-                <h5>Call us: </h5>
-                <div className="alert alert-secondary" role="alert">
-                  <p className="mb-0">{contact_phone_one}</p>
-                  <p className="mb-0">{contact_phone_two}</p>
-                </div>
+
                 
-                
-                <h5>Email: </h5>
-                <p>
-                  <a className="btn btn-secondary" href={`mailto:${contact_email}?subject=Inquiry about your plastic crate`}>{contact_email}</a>
-                </p>
+
               </div>
             </div>
-            <div>
-              <div className="col">
-                If you have any concerns or queries related to our products or our work, kindly contact us via the email address provided. 
-                You can also call us on our phone number, during work hours. We will come in contact with you as soon as possible
-              </div>
-            </div>
+
+            
           </div>
+          <section className='bg-white py-5'>
+            <div className="container-fluid">
+              <div className="">
+                <h2 className="fw-bold display-6 text-center mb-5">
+                  We Take Pride In Our Expertise In
+                </h2>
+              </div>
+              <div className="row g-4">
+                {/* In-House Manufacturing */}
+                <div className="col-md-4 text-center">
+                  <div className="shadow-sm rounded overflow-hidden mb-4">
+                    <img
+                      src="/imgs/contact/high-quality-plastic-pallets-manufacturing.jpg"
+                      alt="In-house manufacturing of plastic pallets and plastic containers"
+                      className="img-fluid"
+                    />
+                  </div>
+                  <h3 className="h5 fw-semibold mb-3">
+                    In-House Manufacturing
+                  </h3>
+                  <p className="text-muted">
+                    We manufacture plastic pallets, plastic bins, and bulk containers
+                    in-house using advanced injection molding and automated production
+                    lines. This ensures consistent quality, cost efficiency, and
+                    sustainable manufacturing for logistics and warehousing applications.
+                  </p>
+                </div>
+                {/* Quality Control */}
+                <div className="col-md-4 text-center">
+                  <div className="shadow-sm rounded overflow-hidden mb-4">
+                    <img
+                      src="/imgs/contact/quality-control-of-plastic-pallets.jpg"
+                      alt="Quality control inspection for plastic pallets and storage containers"
+                      className="img-fluid"
+                    />
+                  </div>
+                  <h3 className="h5 fw-semibold mb-3">
+                    Quality Control
+                  </h3>
+                  <p className="text-muted">
+                    From raw material inspection to load capacity and impact resistance
+                    testing, our quality control process includes multiple checkpoints
+                    to ensure every plastic pallet and storage container meets
+                    international quality and safety standards.
+                  </p>
+                </div>
+                {/* OEM / ODM */}
+                  <div className="col-md-4 text-center">
+                    <div className="shadow-sm rounded overflow-hidden mb-4">
+                      <img
+                        src="/imgs/contact/quality-control-of-plastic-pallets.jpg"
+                        alt="OEM ODM plastic manufacturing services"
+                        className="img-fluid"
+                      />
+                    </div>
+                    <h3 className="h5 fw-semibold mb-3">
+                      OEM / ODM
+                    </h3>
+                    <p className="text-muted">
+                      We provide flexible OEM and ODM plastic manufacturing services,
+                      offering custom sizes, colors, branding, and functional designs.
+                      Our solutions help businesses launch market-ready plastic products
+                      tailored to specific industry requirements.
+                    </p>
+                  </div>
+
+              </div>
+            </div>
+          </section>
         </div>
       </section>
       
