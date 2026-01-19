@@ -62,7 +62,7 @@ const Home = ({ products }) => {
             <ol className="breadcrumb bg-white my-2">
               <li className="breadcrumb-item">
                 <Link href="/">
-                  <a>Home</a>
+                  Home
                 </Link>
               </li>
               <li className="breadcrumb-item active" aria-current="page">{cat_text}</li>
@@ -88,28 +88,45 @@ const Home = ({ products }) => {
           <section className="py-16 bg-white">
             <div className="max-w-7xl mx-auto px-6">
               <h2 className="text-3xl font-bold text-center mb-10">Plastic Pallet Applications</h2>
-              <div className="mb-8">
-                <Image 
-                  src="/imgs/pallet-wholesale.com/img/plastic-pallets/plastic-pallet-application.jpg" 
-                  alt="Plastic Pallet Applications" 
-                  width={800}
-                  height={400}
-                  layout="responsive"
-                />
-              </div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-gray-700">
-                <div className="bg-white p-6 rounded-lg shadow-sm">Warehousing</div>
-                <div className="bg-white p-6 rounded-lg shadow-sm">Logistics &amp; Transport</div>
-                <div className="bg-white p-6 rounded-lg shadow-sm">Export Shipping</div>
-                <div className="bg-white p-6 rounded-lg shadow-sm">Food &amp; Pharma</div>
+                <div className="bg-gray-100 p-6 rounded-lg shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer">Warehousing</div>
+                <div className="bg-gray-100 p-6 rounded-lg shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer">Logistics &amp; Transport</div>
+                <div className="bg-gray-100 p-6 rounded-lg shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer">Export Shipping</div>
+                <div className="bg-gray-100 p-6 rounded-lg shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer">Food &amp; Pharma</div>
               </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start mt-12">
+                <div className="prose prose-sm max-w-none">
+                  <h3 className="text-2xl font-bold mb-6 text-gray-800">Plastic Pallet Usage and Handling Guidelines</h3>
+                  <p className="text-gray-700 mb-4">Plastic pallets must be protected from direct sunlight to prevent premature aging and reduced service life.</p>
+                  
+                  <p className="text-gray-700 mb-4">Dropping or throwing heavy objects onto plastic pallets from a height is strictly prohibited. Goods must be placed evenly on the pallet and should not be concentrated in one area or loaded eccentrically. When carrying heavy loads, ensure the pallet is placed on a flat surface to prevent deformation caused by uneven support.</p>
+                  
+                  <p className="text-gray-700 mb-4">Throwing or dropping plastic pallets from elevated positions is strictly forbidden, as strong impacts may cause cracking or structural damage.</p>
+                  
+                  <p className="text-gray-700 mb-4">When using manual or hydraulic forklifts, ensure correct operation in accordance with the pallet structure. Forklift forks must be fully inserted into the pallet openings and evenly loaded to extend pallet service life. Avoid striking the sides of the pallet with the forklift, as this may result in breakage or cracking.</p>
+                  
+                  <p className="text-gray-700">When pallets are used on shelving systems, only rackable pallets designed for shelving may be used. Load capacity depends on the shelf structure, and overloading is strictly prohibited.</p>
+                </div>
+                
+                <div className="bg-blue-50 rounded-lg shadow-md">
+                  <Image 
+                    src="/imgs/pallet-wholesale.com/img/plastic-pallets/plastic-pallet-application.jpg" 
+                    alt="Plastic Pallet Handling" 
+                    width={400}
+                    height={300}
+                    layout="responsive"
+                  />
+                </div>
+              </div>
+              
 
             </div>
           </section>
         </div>
       </section>
     </Layout>
-  )
+  );
 }
 
 export async function getStaticProps() {

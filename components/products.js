@@ -25,7 +25,7 @@ const Products = ({ products, catConfig={}, website_product_tags=[], ...otherPro
   let sigleProductColumnClass=''
   if(type === "vertical"){
     allProductWrapClass=`row`
-    sigleProductColumnClass = `col-6 col-xs-6 col-sm-4 col-md-3 col-lg-2`
+    sigleProductColumnClass = `col-6 col-xs-6 col-sm-4 col-md-3 col-lg-2 mb-4`
   }
 
   //过滤掉 product 中删除的产品， website-product 中对应的就无法显示
@@ -34,7 +34,6 @@ const Products = ({ products, catConfig={}, website_product_tags=[], ...otherPro
 
   return (
     <SectionWrapper>
-      
       <div className="product-category">
         {catConfig.before_loop_content_html && (
           <section className="category-description before-loop-content bg-white p-3">
@@ -76,19 +75,21 @@ const Products = ({ products, catConfig={}, website_product_tags=[], ...otherPro
                   key={product.slug}
                 >
                   <div className="cat-desc-element-wrap single-product-wrap">
-                    <Link href={`/${product.seo_category_slug}/${encodeURIComponent(product.slug)}`}>
-                      <a className="cat-product-link">
-                        <ProductDetailTemplateCat 
-                          infodata={product.commonproduct}
-                          catConfig={thisCatConfig}
-                          {...otherProps}
-                        />
-                      </a>
+                    <Link
+                      href={`/${product.seo_category_slug}/${encodeURIComponent(product.slug)}`}
+                      className="cat-product-link">
+
+                      <ProductDetailTemplateCat 
+                        infodata={product.commonproduct}
+                        catConfig={thisCatConfig}
+                        {...otherProps}
+                      />
+
                     </Link>
                   </div>
                 </div>
               </>
-            )
+            );
           })}
         </div>
 
@@ -100,7 +101,7 @@ const Products = ({ products, catConfig={}, website_product_tags=[], ...otherPro
         )}
       </div>
     </SectionWrapper>
-  )
+  );
 }
 
 export default Products

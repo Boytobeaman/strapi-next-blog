@@ -148,16 +148,16 @@ class SingleProduct extends React.Component{
                 <ol className="breadcrumb bg-white my-2">
                   <li key={1} className="breadcrumb-item">
                     <Link href="/">
-                      <a>
+                      
                         Home
-                      </a>
+                      
                     </Link>
                   </li>
                   <li key={2} className="breadcrumb-item">
                     <Link href={parentLevelLink}>
-                      <a>
-                        {parentLevelLinkText}
-                      </a>
+
+                      {parentLevelLinkText}
+
                     </Link>
                   </li>
                   <li key={3} className="breadcrumb-item active" aria-current="page">{short_title}</li>
@@ -189,9 +189,8 @@ class SingleProduct extends React.Component{
             </div>
           </div>
         </div>
-
       </section>
-    )
+    );
   }
   
 }

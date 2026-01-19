@@ -157,16 +157,16 @@ class SingleProduct extends React.Component{
                 <ol className="breadcrumb bg-white my-2">
                   <li className="breadcrumb-item">
                     <Link href="/">
-                      <a>
+                      
                         Home
-                      </a>
+                      
                     </Link>
                   </li>
                   <li className="breadcrumb-item">
                     <Link href={parentLevelLink}>
-                      <a>
-                        {parentLevelLinkText}
-                      </a>
+
+                      {parentLevelLinkText}
+
                     </Link>
                   </li>
                   <li className="breadcrumb-item active" aria-current="page">{short_title}</li>
@@ -315,7 +315,7 @@ class SingleProduct extends React.Component{
                         <ul className="taglist">
                           {tags.map(tag => (
                             <li key={tag + `tag`}>
-                              <Link href={`/${productTagRoute}/${kebabCase(tag)}/`}><a>{tag}</a></Link>
+                              <Link href={`/${productTagRoute}/${kebabCase(tag)}/`}>{tag}</Link>
                             </li>
                           ))}
                         </ul>
@@ -372,7 +372,7 @@ class SingleProduct extends React.Component{
           </ModalFooter>
         </Modal>
       </section>
-    )
+    );
   }
   
 }

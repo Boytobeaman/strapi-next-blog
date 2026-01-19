@@ -46,7 +46,7 @@ const AboutUs = ({ products }) => {
             <ol className="breadcrumb bg-white my-2">
               <li className="breadcrumb-item">
                 <Link href="/">
-                  <a>Home</a>
+                  Home
                 </Link>
               </li>
               <li className="breadcrumb-item active" aria-current="page">{cat_text}</li>
@@ -203,10 +203,14 @@ const AboutUs = ({ products }) => {
                 <div className="d-flex align-items-center justify-content-center h-100">
                   <div className="col-sm-8 text-center p-3 content">
                     <h6 className="py-3 h4">If you interested in our products and service, please don't hesitate to contact us</h6>
-                    <Link href={menu.contact.url}>
-                      <a className="btn btn-danger btn-lg active" role="button" aria-pressed="true">
+                    <Link
+                      href={menu.contact.url}
+                      className="btn btn-danger btn-lg active"
+                      role="button"
+                      aria-pressed="true">
+                      
                         Contact Us
-                      </a>
+                      
                     </Link>
                   </div>
                 </div>
@@ -216,7 +220,7 @@ const AboutUs = ({ products }) => {
         </section>
       </div>
     </Layout>
-  )
+  );
 }
 
 

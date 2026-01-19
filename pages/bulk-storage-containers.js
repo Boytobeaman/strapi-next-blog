@@ -38,7 +38,7 @@ const Home = ({ products }) => {
             <ol className="breadcrumb bg-white my-2">
               <li className="breadcrumb-item">
                 <Link href="/">
-                  <a>Home</a>
+                  Home
                 </Link>
               </li>
               <li className="breadcrumb-item active" aria-current="page">{cat_text}</li>
@@ -51,7 +51,7 @@ const Home = ({ products }) => {
         </div>
       </section>
     </Layout>
-  )
+  );
 }
 
 export async function getStaticProps() {

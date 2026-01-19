@@ -46,55 +46,61 @@ const Home = ({ articles }) => {
           <h2 className="text-center p-4 text-white">Products Categories</h2>
           <div className="row mx-0">
             <div className="col-sm-3">
-              <Link href={menu.pallet.url}>
-                <a className="nav-link text-white font-weight-bold pb-0">
-                  <Image 
-                    alt={menu.pallet.text} 
-                    src={`/imgs/plastic-pallets.jpg`} 
-                    width="300" 
-                    height="250"
-                    layout="responsive"
-                  />
-                  <p className="home-page-cat-text text-center">
-                    Plastic Pallets
-                  </p>
-                </a>
+              <Link
+                href={menu.pallet.url}
+                className="nav-link text-white font-weight-bold pb-0">
+
+                <Image 
+                  alt={menu.pallet.text} 
+                  src={`/imgs/plastic-pallets.jpg`} 
+                  width="300" 
+                  height="250"
+                  layout="responsive"
+                />
+                <p className="home-page-cat-text text-center">
+                  Plastic Pallets
+                </p>
+
               </Link>
             </div>
             <div className="col-sm-3">
-              <Link href={menu.palletBox.url}>
-                <a className="nav-link text-white font-weight-bold pb-0">
-                  <Image 
-                    alt={menu.palletBox.text} 
-                    src={`/imgs/plastic-pallet-boxes-b.jpg`} 
-                    width="300" 
-                    height="250"
-                    layout="responsive"
-                  />
-                  <p className="home-page-cat-text text-center">
-                    Plastic Pallet Boxes
-                  </p>
-                  <div className="d-none">
-                    each reusable Plastic Pallet Boxes is designed to protect your product and reduce handling costs.
-                    containers are available in light-duty, medium-duty and heavy-duty designs to meet any requirement.
-                  </div>
-                </a>
+              <Link
+                href={menu.palletBox.url}
+                className="nav-link text-white font-weight-bold pb-0">
+
+                <Image 
+                  alt={menu.palletBox.text} 
+                  src={`/imgs/plastic-pallet-boxes-b.jpg`} 
+                  width="300" 
+                  height="250"
+                  layout="responsive"
+                />
+                <p className="home-page-cat-text text-center">
+                  Plastic Pallet Boxes
+                </p>
+                <div className="d-none">
+                  each reusable Plastic Pallet Boxes is designed to protect your product and reduce handling costs.
+                  containers are available in light-duty, medium-duty and heavy-duty designs to meet any requirement.
+                </div>
+
               </Link>
             </div>
             <div className="col-sm-3">
-              <Link href={menu.foldingCrate.url}>
-                <a className="nav-link text-white font-weight-bold pb-0">
-                  <Image 
-                    alt={`Plastic Folding Crates`} 
-                    src={`/imgs/folding-crates.jpg`} 
-                    width="300" 
-                    height="250"
-                    layout="responsive"
-                  />
-                  <p className="home-page-cat-text text-center">
-                    Folding Crates
-                  </p>
-                </a>
+              <Link
+                href={menu.foldingCrate.url}
+                className="nav-link text-white font-weight-bold pb-0">
+
+                <Image 
+                  alt={`Plastic Folding Crates`} 
+                  src={`/imgs/folding-crates.jpg`} 
+                  width="300" 
+                  height="250"
+                  layout="responsive"
+                />
+                <p className="home-page-cat-text text-center">
+                  Folding Crates
+                </p>
+
               </Link>
             </div>
             <div className="col-sm-3">
@@ -141,10 +147,14 @@ const Home = ({ articles }) => {
                   <p>
                    Plastic pallets protect your product during picking, assembly, processing, storage and distribution in a wide variety of industries including food and beverage, primary packaging, retail distribution, automotive, pharmaceutical, and many others. 
                   </p>
-                  <Link href={menu.contact.url}>
-                    <a className="btn btn-danger btn-lg active" role="button" aria-pressed="true">
+                  <Link
+                    href={menu.contact.url}
+                    className="btn btn-danger btn-lg active"
+                    role="button"
+                    aria-pressed="true">
+                    
                       Contact Us
-                    </a>
+                    
                   </Link>
                 </div>
               </div>
@@ -214,7 +224,7 @@ const Home = ({ articles }) => {
         </section>
       </div>
     </Layout>
-  )
+  );
 }
 
 

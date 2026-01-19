@@ -36,8 +36,8 @@ export default class MainNavbar extends React.Component{
       if(this_url === "/"){
         return (
           <NavItem key={key}>
-            <Link href="/">
-              <a className="nav-link" title="Home">Home</a>
+            <Link href="/" className="nav-link" title="Home">
+              Home
             </Link>
           </NavItem>
         )
@@ -45,10 +45,8 @@ export default class MainNavbar extends React.Component{
         if(this_menu.showInUi){
           return (
             <NavItem key={key}>
-              <Link  href={this_menu.url}>
-                <a className={`nav-link`} title={this_menu.text}>
-                  {this_menu.text}
-                </a>
+              <Link  href={this_menu.url} className={`nav-link`} title={this_menu.text}>
+                {this_menu.text}
               </Link>
             </NavItem>
           )
