@@ -1,3 +1,4 @@
+import 'tailwindcss/tailwind.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../assets/scss/all.scss'
 import '../components/cat-page-style.scss'

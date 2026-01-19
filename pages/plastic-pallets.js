@@ -3,6 +3,7 @@ import Products from '../components/products'
 import Layout from '../components/layout'
 import SEO from '../components/SEO/SEO'
 import Link from 'next/link'
+import Image from 'next/image'
 import {DOMAIN, menu } from '~/utils/common'
 import { getProducts, getCategories, getProductsByCondition } from '../lib/api'
 
@@ -83,6 +84,28 @@ const Home = ({ products }) => {
             products={products}
             type="vertical"
           />
+
+          <section className="py-16 bg-white">
+            <div className="max-w-7xl mx-auto px-6">
+              <h2 className="text-3xl font-bold text-center mb-10">Plastic Pallet Applications</h2>
+              <div className="mb-8">
+                <Image 
+                  src="/imgs/pallet-wholesale.com/img/plastic-pallets/plastic-pallet-application.jpg" 
+                  alt="Plastic Pallet Applications" 
+                  width={800}
+                  height={400}
+                  layout="responsive"
+                />
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-gray-700">
+                <div className="bg-white p-6 rounded-lg shadow-sm">Warehousing</div>
+                <div className="bg-white p-6 rounded-lg shadow-sm">Logistics &amp; Transport</div>
+                <div className="bg-white p-6 rounded-lg shadow-sm">Export Shipping</div>
+                <div className="bg-white p-6 rounded-lg shadow-sm">Food &amp; Pharma</div>
+              </div>
+
+            </div>
+          </section>
         </div>
       </section>
     </Layout>
