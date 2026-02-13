@@ -20,6 +20,8 @@ export const productBrand='Joinplastic'
 
 export const contact_email = 'sales@papallet.com';
 
+export const CLOUDFLARE_TURNSTILE_SITE_KEY='0x4AAAAAAB_3PZLK4k1Ns1h6';
+
 export const contact_phone_one = '';
 export const contact_phone_two = '';
 export const facebook_url = 'https://www.facebook.com/movingbox.sale.1';
