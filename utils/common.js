@@ -7,6 +7,7 @@ export const inquiry_api_success_code = 0;
 export const inquiry_handle_app_name = '/DEMO_APP';
 export const inquiry_handle_inquiry_url = '/customer-inquiries/inquiry';
 export const inquiry_handle_email_url = '/customer-inquiries/email';
+export const inquiry_handle_inquiry_and_email_url = '/customer-inquiries/inquiryAndEmailWithTurnstile';
 export const company_name = 'packagingcompany';
 export const remote_ip_url = 'https://api.db-ip.com/v2/free/self';
 
