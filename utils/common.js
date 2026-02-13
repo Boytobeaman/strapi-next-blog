@@ -2,12 +2,12 @@ export const mmtoinch = 0.03937;
 export const kgtolbs = 2.20462262;
 export const ltogal = 0.26417;
 export const contact_url = '/contact/';
-export const inquiry_handle_base_url = 'https://api.50d.top';
+export const inquiry_handle_base_url = 'https://nestjs.50d.top';
 export const inquiry_api_success_code = 0;
 export const inquiry_handle_app_name = '/DEMO_APP';
-export const inquiry_handle_inquiry_url = '/inquiry/new';
-export const inquiry_handle_email_url = '/email/templateEmail';
-export const company_name = 'joinplastic';
+export const inquiry_handle_inquiry_url = '/customer-inquiries/inquiry';
+export const inquiry_handle_email_url = '/customer-inquiries/email';
+export const company_name = 'packagingcompany';
 export const remote_ip_url = 'https://api.db-ip.com/v2/free/self';
 
 export const DOMAIN='pallet-wholesale.com'
@@ -16,9 +16,11 @@ export const siteUrl='https://www.pallet-wholesale.com'
 export const twitterUsername='@PalletBoxSale'
 export const facebookAppID=''
 export const productBrand='Joinplastic'
-export const contact_email = 'inquiry@joinplastic.com';
-export const contact_phone_one = '(+86)021-59117621';
-export const contact_phone_two = '(+86)13671889020';
+
+export const contact_email = 'sales@papallet.com';
+
+export const contact_phone_one = '';
+export const contact_phone_two = '';
 export const facebook_url = 'https://www.facebook.com/movingbox.sale.1';
 export const twitter_url = 'https://twitter.com/movingboxsale';
 export const cdn_url = 'https://cdn.movingboxsale.com';
